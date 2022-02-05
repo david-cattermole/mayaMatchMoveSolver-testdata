@@ -108,11 +108,13 @@ createNode camera -n "cam_tfmShape1" -p "cam_tfm1";
 	setAttr ".den" -type "string" "camera1_depth";
 	setAttr ".man" -type "string" "camera1_mask";
 	setAttr ".tp" -type "double3" 0 0.5 0 ;
-createNode transform -n "marker_tfm1" -p "cam_tfm1";
+createNode mmMarkerGroupTransform -n "marker_group" -p "cam_tfm1";
+	rename -uid "FC6B3551-434A-99C4-A30D-458AAE61C585";
+createNode transform -n "marker_tfm1" -p "|cam_tfm1|marker_group";
 	rename -uid "3B63E860-0000-02F5-5A17-E7BE0000027B";
 	setAttr ".wfcc" -type "float3" 0 1 0 ;
 	setAttr ".uoc" 2;
-	setAttr ".t" -type "double3" -0.17964488801207071 0.031751189509109289 -1 ;
+	setAttr ".t" -type "double3" -0.17465510154416819 0.046303910641935175 -1 ;
 	setAttr -l on ".tz";
 	setAttr -l on ".rx";
 	setAttr -l on ".ry";
@@ -120,17 +122,17 @@ createNode transform -n "marker_tfm1" -p "cam_tfm1";
 	setAttr -l on ".sx";
 	setAttr -l on ".sy";
 	setAttr -l on ".sz";
-createNode locator -n "marker_tfm1Shape" -p "|cam_tfm1|marker_tfm1";
+createNode locator -n "marker_tfm1Shape" -p "|cam_tfm1|marker_group|marker_tfm1";
 	rename -uid "3B63E860-0000-02F5-5A17-E7BE0000027C";
 	setAttr -k off ".v";
 	setAttr ".wfcc" -type "float3" 0 1 0 ;
 	setAttr ".uoc" 2;
 	setAttr ".los" -type "double3" 0.06 0.06 0.06 ;
-createNode transform -n "marker_tfm2" -p "cam_tfm1";
+createNode transform -n "marker_tfm2" -p "|cam_tfm1|marker_group";
 	rename -uid "3B63E860-0000-02F5-5A17-E81F00000295";
 	setAttr ".wfcc" -type "float3" 0 1 0 ;
 	setAttr ".uoc" 2;
-	setAttr ".t" -type "double3" 0.28408959034466585 -0.0050133457119647682 -1 ;
+	setAttr ".t" -type "double3" 0.27619876523261411 -0.007311143785567964 -1 ;
 	setAttr -l on ".tz";
 	setAttr -l on ".rx";
 	setAttr -l on ".ry";
@@ -138,17 +140,17 @@ createNode transform -n "marker_tfm2" -p "cam_tfm1";
 	setAttr -l on ".sx";
 	setAttr -l on ".sy";
 	setAttr -l on ".sz";
-createNode locator -n "marker_tfm2Shape" -p "|cam_tfm1|marker_tfm2";
+createNode locator -n "marker_tfm2Shape" -p "|cam_tfm1|marker_group|marker_tfm2";
 	rename -uid "3B63E860-0000-02F5-5A17-E81F00000296";
 	setAttr -k off ".v";
 	setAttr ".wfcc" -type "float3" 0 1 0 ;
 	setAttr ".uoc" 2;
 	setAttr ".los" -type "double3" 0.06 0.06 0.06 ;
-createNode transform -n "marker_tfm3" -p "cam_tfm1";
+createNode transform -n "marker_tfm3" -p "|cam_tfm1|marker_group";
 	rename -uid "3B63E860-0000-02F5-5A17-E82100000297";
 	setAttr ".wfcc" -type "float3" 0 1 0 ;
 	setAttr ".uoc" 2;
-	setAttr ".t" -type "double3" 0.16878263896947693 0.0041777880933022817 -1 ;
+	setAttr ".t" -type "double3" 0.16409456052054594 0.0060926198213060445 -1 ;
 	setAttr -l on ".tz";
 	setAttr -l on ".rx";
 	setAttr -l on ".ry";
@@ -156,17 +158,17 @@ createNode transform -n "marker_tfm3" -p "cam_tfm1";
 	setAttr -l on ".sx";
 	setAttr -l on ".sy";
 	setAttr -l on ".sz";
-createNode locator -n "marker_tfm3Shape" -p "|cam_tfm1|marker_tfm3";
+createNode locator -n "marker_tfm3Shape" -p "|cam_tfm1|marker_group|marker_tfm3";
 	rename -uid "3B63E860-0000-02F5-5A17-E82100000298";
 	setAttr -k off ".v";
 	setAttr ".wfcc" -type "float3" 0 1 0 ;
 	setAttr ".uoc" 2;
 	setAttr ".los" -type "double3" 0.06 0.06 0.06 ;
-createNode transform -n "marker_tfm4" -p "cam_tfm1";
+createNode transform -n "marker_tfm4" -p "|cam_tfm1|marker_group";
 	rename -uid "3B63E860-0000-02F5-5A17-E82100000299";
 	setAttr ".wfcc" -type "float3" 0 1 0 ;
 	setAttr ".uoc" 2;
-	setAttr ".t" -type "double3" 0.20304050133456758 0.17630265753742713 -1 ;
+	setAttr ".t" -type "double3" 0.197400882210367 0.2571085564591904 -1 ;
 	setAttr -l on ".tz";
 	setAttr -l on ".rx";
 	setAttr -l on ".ry";
@@ -174,17 +176,17 @@ createNode transform -n "marker_tfm4" -p "cam_tfm1";
 	setAttr -l on ".sx";
 	setAttr -l on ".sy";
 	setAttr -l on ".sz";
-createNode locator -n "marker_tfm4Shape" -p "|cam_tfm1|marker_tfm4";
+createNode locator -n "marker_tfm4Shape" -p "|cam_tfm1|marker_group|marker_tfm4";
 	rename -uid "3B63E860-0000-02F5-5A17-E8210000029A";
 	setAttr -k off ".v";
 	setAttr ".wfcc" -type "float3" 0 1 0 ;
 	setAttr ".uoc" 2;
 	setAttr ".los" -type "double3" 0.06 0.06 0.06 ;
-createNode transform -n "marker_tfm5" -p "cam_tfm1";
+createNode transform -n "marker_tfm5" -p "|cam_tfm1|marker_group";
 	rename -uid "3B63E860-0000-02F5-5A17-E8210000029B";
 	setAttr ".wfcc" -type "float3" 0 1 0 ;
 	setAttr ".uoc" 2;
-	setAttr ".t" -type "double3" 0.19635604038528545 0.11614250899384834 -1 ;
+	setAttr ".t" -type "double3" 0.19090208773430817 0.16937483103235706 -1 ;
 	setAttr -l on ".tz";
 	setAttr -l on ".rx";
 	setAttr -l on ".ry";
@@ -192,17 +194,17 @@ createNode transform -n "marker_tfm5" -p "cam_tfm1";
 	setAttr -l on ".sx";
 	setAttr -l on ".sy";
 	setAttr -l on ".sz";
-createNode locator -n "marker_tfm5Shape" -p "|cam_tfm1|marker_tfm5";
+createNode locator -n "marker_tfm5Shape" -p "|cam_tfm1|marker_group|marker_tfm5";
 	rename -uid "3B63E860-0000-02F5-5A17-E8210000029C";
 	setAttr -k off ".v";
 	setAttr ".wfcc" -type "float3" 0 1 0 ;
 	setAttr ".uoc" 2;
 	setAttr ".los" -type "double3" 0.06 0.06 0.06 ;
-createNode transform -n "marker_tfm6" -p "cam_tfm1";
+createNode transform -n "marker_tfm6" -p "|cam_tfm1|marker_group";
 	rename -uid "3B63E860-0000-02F5-5A17-E8240000029D";
 	setAttr ".wfcc" -type "float3" 0 1 0 ;
 	setAttr ".uoc" 2;
-	setAttr ".t" -type "double3" -0.14538702564697592 -0.060160148543579081 -1 ;
+	setAttr ".t" -type "double3" -0.14134877985434713 -0.087733725426836884 -1 ;
 	setAttr -l on ".tz";
 	setAttr -l on ".rx";
 	setAttr -l on ".ry";
@@ -210,7 +212,7 @@ createNode transform -n "marker_tfm6" -p "cam_tfm1";
 	setAttr -l on ".sx";
 	setAttr -l on ".sy";
 	setAttr -l on ".sz";
-createNode locator -n "marker_tfm6Shape" -p "|cam_tfm1|marker_tfm6";
+createNode locator -n "marker_tfm6Shape" -p "|cam_tfm1|marker_group|marker_tfm6";
 	rename -uid "3B63E860-0000-02F5-5A17-E8240000029E";
 	setAttr -k off ".v";
 	setAttr ".wfcc" -type "float3" 0 1 0 ;
@@ -233,11 +235,13 @@ createNode camera -n "cam_tfmShape2" -p "cam_tfm2";
 	setAttr ".imn" -type "string" "camera2";
 	setAttr ".den" -type "string" "camera2_depth";
 	setAttr ".man" -type "string" "camera2_mask";
-createNode transform -n "marker_tfm1" -p "cam_tfm2";
+createNode mmMarkerGroupTransform -n "marker_group" -p "cam_tfm2";
+	rename -uid "576A9C46-4C25-2A6F-A48A-E8B48B6D8F73";
+createNode transform -n "marker_tfm1" -p "|cam_tfm2|marker_group";
 	rename -uid "3B63E860-0000-02F5-5A17-E8270000029F";
 	setAttr ".wfcc" -type "float3" 0 1 0 ;
 	setAttr ".uoc" 2;
-	setAttr ".t" -type "double3" 0.14966930475956314 -0.0028786905274410393 -1 ;
+	setAttr ".t" -type "double3" 0.1455121150960248 -0.0041980987487093557 -1 ;
 	setAttr -l on ".tz";
 	setAttr -l on ".rx";
 	setAttr -l on ".ry";
@@ -245,17 +249,17 @@ createNode transform -n "marker_tfm1" -p "cam_tfm2";
 	setAttr -l on ".sx";
 	setAttr -l on ".sy";
 	setAttr -l on ".sz";
-createNode locator -n "marker_tfm1Shape" -p "|cam_tfm2|marker_tfm1";
+createNode locator -n "marker_tfm1Shape" -p "|cam_tfm2|marker_group|marker_tfm1";
 	rename -uid "3B63E860-0000-02F5-5A17-E827000002A0";
 	setAttr -k off ".v";
 	setAttr ".wfcc" -type "float3" 0 1 0 ;
 	setAttr ".uoc" 2;
 	setAttr ".los" -type "double3" 0.05 0.05 0.05 ;
-createNode transform -n "marker_tfm2" -p "cam_tfm2";
+createNode transform -n "marker_tfm2" -p "|cam_tfm2|marker_group";
 	rename -uid "3B63E860-0000-02F5-5A17-E827000002A1";
 	setAttr ".wfcc" -type "float3" 0 1 0 ;
 	setAttr ".uoc" 2;
-	setAttr ".t" -type "double3" 0.17490203323651879 0.15311676732453153 -1 ;
+	setAttr ".t" -type "double3" 0.17004398351236061 0.2232957322730762 -1 ;
 	setAttr -l on ".tz";
 	setAttr -l on ".rx";
 	setAttr -l on ".ry";
@@ -263,17 +267,17 @@ createNode transform -n "marker_tfm2" -p "cam_tfm2";
 	setAttr -l on ".sx";
 	setAttr -l on ".sy";
 	setAttr -l on ".sz";
-createNode locator -n "marker_tfm2Shape" -p "|cam_tfm2|marker_tfm2";
+createNode locator -n "marker_tfm2Shape" -p "|cam_tfm2|marker_group|marker_tfm2";
 	rename -uid "3B63E860-0000-02F5-5A17-E827000002A2";
 	setAttr -k off ".v";
 	setAttr ".wfcc" -type "float3" 0 1 0 ;
 	setAttr ".uoc" 2;
 	setAttr ".los" -type "double3" 0.05 0.05 0.05 ;
-createNode transform -n "marker_tfm3" -p "cam_tfm2";
+createNode transform -n "marker_tfm3" -p "|cam_tfm2|marker_group";
 	rename -uid "3B63E860-0000-02F5-5A17-E827000002A3";
 	setAttr ".wfcc" -type "float3" 0 1 0 ;
 	setAttr ".uoc" 2;
-	setAttr ".t" -type "double3" 0.16702499756478881 0.12652824934570114 -1 ;
+	setAttr ".t" -type "double3" 0.16238573907057896 0.18452073267060953 -1 ;
 	setAttr -l on ".tz";
 	setAttr -l on ".rx";
 	setAttr -l on ".ry";
@@ -281,17 +285,17 @@ createNode transform -n "marker_tfm3" -p "cam_tfm2";
 	setAttr -l on ".sx";
 	setAttr -l on ".sy";
 	setAttr -l on ".sz";
-createNode locator -n "marker_tfm3Shape" -p "|cam_tfm2|marker_tfm3";
+createNode locator -n "marker_tfm3Shape" -p "|cam_tfm2|marker_group|marker_tfm3";
 	rename -uid "3B63E860-0000-02F5-5A17-E827000002A4";
 	setAttr -k off ".v";
 	setAttr ".wfcc" -type "float3" 0 1 0 ;
 	setAttr ".uoc" 2;
 	setAttr ".los" -type "double3" 0.05 0.05 0.05 ;
-createNode transform -n "marker_tfm4" -p "cam_tfm2";
+createNode transform -n "marker_tfm4" -p "|cam_tfm2|marker_group";
 	rename -uid "3B63E860-0000-02F5-5A17-E827000002A5";
 	setAttr ".wfcc" -type "float3" 0 1 0 ;
 	setAttr ".uoc" 2;
-	setAttr ".t" -type "double3" -0.39919459985636446 0.16494500249210933 -1 ;
+	setAttr ".t" -type "double3" -0.38810663718474503 0.24054527639153989 -1 ;
 	setAttr -l on ".tz";
 	setAttr -l on ".rx";
 	setAttr -l on ".ry";
@@ -299,17 +303,17 @@ createNode transform -n "marker_tfm4" -p "cam_tfm2";
 	setAttr -l on ".sx";
 	setAttr -l on ".sy";
 	setAttr -l on ".sz";
-createNode locator -n "marker_tfm4Shape" -p "|cam_tfm2|marker_tfm4";
+createNode locator -n "marker_tfm4Shape" -p "|cam_tfm2|marker_group|marker_tfm4";
 	rename -uid "3B63E860-0000-02F5-5A17-E827000002A6";
 	setAttr -k off ".v";
 	setAttr ".wfcc" -type "float3" 0 1 0 ;
 	setAttr ".uoc" 2;
 	setAttr ".los" -type "double3" 0.05 0.05 0.05 ;
-createNode transform -n "marker_tfm5" -p "cam_tfm2";
+createNode transform -n "marker_tfm5" -p "|cam_tfm2|marker_group";
 	rename -uid "3B63E860-0000-02F5-5A17-E827000002A7";
 	setAttr ".wfcc" -type "float3" 0 1 0 ;
 	setAttr ".uoc" 2;
-	setAttr ".t" -type "double3" -0.32182641079472712 0.1095510524624216 -1 ;
+	setAttr ".t" -type "double3" -0.31288741404748466 0.15976227103223906 -1 ;
 	setAttr -l on ".tz";
 	setAttr -l on ".rx";
 	setAttr -l on ".ry";
@@ -317,17 +321,17 @@ createNode transform -n "marker_tfm5" -p "cam_tfm2";
 	setAttr -l on ".sx";
 	setAttr -l on ".sy";
 	setAttr -l on ".sz";
-createNode locator -n "marker_tfm5Shape" -p "|cam_tfm2|marker_tfm5";
+createNode locator -n "marker_tfm5Shape" -p "|cam_tfm2|marker_group|marker_tfm5";
 	rename -uid "3B63E860-0000-02F5-5A17-E827000002A8";
 	setAttr -k off ".v";
 	setAttr ".wfcc" -type "float3" 0 1 0 ;
 	setAttr ".uoc" 2;
 	setAttr ".los" -type "double3" 0.05 0.05 0.05 ;
-createNode transform -n "marker_tfm6" -p "cam_tfm2";
+createNode transform -n "marker_tfm6" -p "|cam_tfm2|marker_group";
 	rename -uid "3B63E860-0000-02F5-5A17-E827000002A9";
 	setAttr ".wfcc" -type "float3" 0 1 0 ;
 	setAttr ".uoc" 2;
-	setAttr ".t" -type "double3" 0.20387605895323535 -0.049297899500983969 -1 ;
+	setAttr ".t" -type "double3" 0.19821323151987924 -0.071892913891421273 -1 ;
 	setAttr -l on ".tz";
 	setAttr -l on ".rx";
 	setAttr -l on ".ry";
@@ -335,7 +339,7 @@ createNode transform -n "marker_tfm6" -p "cam_tfm2";
 	setAttr -l on ".sx";
 	setAttr -l on ".sy";
 	setAttr -l on ".sz";
-createNode locator -n "marker_tfm6Shape" -p "|cam_tfm2|marker_tfm6";
+createNode locator -n "marker_tfm6Shape" -p "|cam_tfm2|marker_group|marker_tfm6";
 	rename -uid "3B63E860-0000-02F5-5A17-E827000002AA";
 	setAttr -k off ".v";
 	setAttr ".wfcc" -type "float3" 0 1 0 ;
@@ -1044,6 +1048,10 @@ createNode nodeGraphEditorInfo -n "MayaNodeEditorSavedTabsInfo";
 	setAttr ".tgi[0].ni[11].x" -95.714286804199219;
 	setAttr ".tgi[0].ni[11].y" 474.28570556640625;
 	setAttr ".tgi[0].ni[11].nvs" 18304;
+createNode mmMarkerScale -n "mmMarkerScale1";
+	rename -uid "1896A532-4565-8739-C90C-7B82E2B62D3F";
+createNode mmMarkerScale -n "mmMarkerScale2";
+	rename -uid "68BE6639-4018-B8FB-8095-34BC9837BF2E";
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -1073,6 +1081,10 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
+connectAttr "mmMarkerScale1.os" "|cam_tfm1|marker_group.s";
+connectAttr "mmMarkerScale1.ot" "|cam_tfm1|marker_group.t";
+connectAttr "mmMarkerScale2.os" "|cam_tfm2|marker_group.s";
+connectAttr "mmMarkerScale2.ot" "|cam_tfm2|marker_group.t";
 connectAttr "polyCube1.out" "box1Shape.i";
 connectAttr "polyCube2.out" "boxShape2.i";
 connectAttr "annotation1_pointConstraint1.ctx" "annotation1.tx";
@@ -1082,11 +1094,14 @@ connectAttr "annotationLocator1Shape.wm" "annotationShape1.dom" -na;
 connectAttr "annotation1.pim" "annotation1_pointConstraint1.cpim";
 connectAttr "annotation1.rp" "annotation1_pointConstraint1.crp";
 connectAttr "annotation1.rpt" "annotation1_pointConstraint1.crt";
-connectAttr "|cam_tfm1|marker_tfm1.t" "annotation1_pointConstraint1.tg[0].tt";
-connectAttr "|cam_tfm1|marker_tfm1.rp" "annotation1_pointConstraint1.tg[0].trp";
-connectAttr "|cam_tfm1|marker_tfm1.rpt" "annotation1_pointConstraint1.tg[0].trt"
+connectAttr "|cam_tfm1|marker_group|marker_tfm1.t" "annotation1_pointConstraint1.tg[0].tt"
 		;
-connectAttr "|cam_tfm1|marker_tfm1.pm" "annotation1_pointConstraint1.tg[0].tpm";
+connectAttr "|cam_tfm1|marker_group|marker_tfm1.rp" "annotation1_pointConstraint1.tg[0].trp"
+		;
+connectAttr "|cam_tfm1|marker_group|marker_tfm1.rpt" "annotation1_pointConstraint1.tg[0].trt"
+		;
+connectAttr "|cam_tfm1|marker_group|marker_tfm1.pm" "annotation1_pointConstraint1.tg[0].tpm"
+		;
 connectAttr "annotation1_pointConstraint1.w0" "annotation1_pointConstraint1.tg[0].tw"
 		;
 connectAttr "annotation7_pointConstraint1.ctx" "annotation7.tx";
@@ -1096,11 +1111,14 @@ connectAttr "annotationLocator7Shape.wm" "annotationShape7.dom" -na;
 connectAttr "annotation7.pim" "annotation7_pointConstraint1.cpim";
 connectAttr "annotation7.rp" "annotation7_pointConstraint1.crp";
 connectAttr "annotation7.rpt" "annotation7_pointConstraint1.crt";
-connectAttr "|cam_tfm2|marker_tfm1.t" "annotation7_pointConstraint1.tg[0].tt";
-connectAttr "|cam_tfm2|marker_tfm1.rp" "annotation7_pointConstraint1.tg[0].trp";
-connectAttr "|cam_tfm2|marker_tfm1.rpt" "annotation7_pointConstraint1.tg[0].trt"
+connectAttr "|cam_tfm2|marker_group|marker_tfm1.t" "annotation7_pointConstraint1.tg[0].tt"
 		;
-connectAttr "|cam_tfm2|marker_tfm1.pm" "annotation7_pointConstraint1.tg[0].tpm";
+connectAttr "|cam_tfm2|marker_group|marker_tfm1.rp" "annotation7_pointConstraint1.tg[0].trp"
+		;
+connectAttr "|cam_tfm2|marker_group|marker_tfm1.rpt" "annotation7_pointConstraint1.tg[0].trt"
+		;
+connectAttr "|cam_tfm2|marker_group|marker_tfm1.pm" "annotation7_pointConstraint1.tg[0].tpm"
+		;
 connectAttr "annotation7_pointConstraint1.w0" "annotation7_pointConstraint1.tg[0].tw"
 		;
 connectAttr "annotation2_pointConstraint1.ctx" "annotation2.tx";
@@ -1110,11 +1128,14 @@ connectAttr "annotationLocator2Shape.wm" "annotationShape2.dom" -na;
 connectAttr "annotation2.pim" "annotation2_pointConstraint1.cpim";
 connectAttr "annotation2.rp" "annotation2_pointConstraint1.crp";
 connectAttr "annotation2.rpt" "annotation2_pointConstraint1.crt";
-connectAttr "|cam_tfm1|marker_tfm2.t" "annotation2_pointConstraint1.tg[0].tt";
-connectAttr "|cam_tfm1|marker_tfm2.rp" "annotation2_pointConstraint1.tg[0].trp";
-connectAttr "|cam_tfm1|marker_tfm2.rpt" "annotation2_pointConstraint1.tg[0].trt"
+connectAttr "|cam_tfm1|marker_group|marker_tfm2.t" "annotation2_pointConstraint1.tg[0].tt"
 		;
-connectAttr "|cam_tfm1|marker_tfm2.pm" "annotation2_pointConstraint1.tg[0].tpm";
+connectAttr "|cam_tfm1|marker_group|marker_tfm2.rp" "annotation2_pointConstraint1.tg[0].trp"
+		;
+connectAttr "|cam_tfm1|marker_group|marker_tfm2.rpt" "annotation2_pointConstraint1.tg[0].trt"
+		;
+connectAttr "|cam_tfm1|marker_group|marker_tfm2.pm" "annotation2_pointConstraint1.tg[0].tpm"
+		;
 connectAttr "annotation2_pointConstraint1.w0" "annotation2_pointConstraint1.tg[0].tw"
 		;
 connectAttr "annotation8_pointConstraint1.ctx" "annotation8.tx";
@@ -1124,11 +1145,14 @@ connectAttr "annotationLocator8Shape.wm" "annotationShape8.dom" -na;
 connectAttr "annotation8.pim" "annotation8_pointConstraint1.cpim";
 connectAttr "annotation8.rp" "annotation8_pointConstraint1.crp";
 connectAttr "annotation8.rpt" "annotation8_pointConstraint1.crt";
-connectAttr "|cam_tfm2|marker_tfm2.t" "annotation8_pointConstraint1.tg[0].tt";
-connectAttr "|cam_tfm2|marker_tfm2.rp" "annotation8_pointConstraint1.tg[0].trp";
-connectAttr "|cam_tfm2|marker_tfm2.rpt" "annotation8_pointConstraint1.tg[0].trt"
+connectAttr "|cam_tfm2|marker_group|marker_tfm2.t" "annotation8_pointConstraint1.tg[0].tt"
 		;
-connectAttr "|cam_tfm2|marker_tfm2.pm" "annotation8_pointConstraint1.tg[0].tpm";
+connectAttr "|cam_tfm2|marker_group|marker_tfm2.rp" "annotation8_pointConstraint1.tg[0].trp"
+		;
+connectAttr "|cam_tfm2|marker_group|marker_tfm2.rpt" "annotation8_pointConstraint1.tg[0].trt"
+		;
+connectAttr "|cam_tfm2|marker_group|marker_tfm2.pm" "annotation8_pointConstraint1.tg[0].tpm"
+		;
 connectAttr "annotation8_pointConstraint1.w0" "annotation8_pointConstraint1.tg[0].tw"
 		;
 connectAttr "annotation3_pointConstraint1.ctx" "annotation3.tx";
@@ -1138,11 +1162,14 @@ connectAttr "annotationLocator3Shape.wm" "annotationShape3.dom" -na;
 connectAttr "annotation3.pim" "annotation3_pointConstraint1.cpim";
 connectAttr "annotation3.rp" "annotation3_pointConstraint1.crp";
 connectAttr "annotation3.rpt" "annotation3_pointConstraint1.crt";
-connectAttr "|cam_tfm1|marker_tfm3.t" "annotation3_pointConstraint1.tg[0].tt";
-connectAttr "|cam_tfm1|marker_tfm3.rp" "annotation3_pointConstraint1.tg[0].trp";
-connectAttr "|cam_tfm1|marker_tfm3.rpt" "annotation3_pointConstraint1.tg[0].trt"
+connectAttr "|cam_tfm1|marker_group|marker_tfm3.t" "annotation3_pointConstraint1.tg[0].tt"
 		;
-connectAttr "|cam_tfm1|marker_tfm3.pm" "annotation3_pointConstraint1.tg[0].tpm";
+connectAttr "|cam_tfm1|marker_group|marker_tfm3.rp" "annotation3_pointConstraint1.tg[0].trp"
+		;
+connectAttr "|cam_tfm1|marker_group|marker_tfm3.rpt" "annotation3_pointConstraint1.tg[0].trt"
+		;
+connectAttr "|cam_tfm1|marker_group|marker_tfm3.pm" "annotation3_pointConstraint1.tg[0].tpm"
+		;
 connectAttr "annotation3_pointConstraint1.w0" "annotation3_pointConstraint1.tg[0].tw"
 		;
 connectAttr "annotation9_pointConstraint1.ctx" "annotation9.tx";
@@ -1152,11 +1179,14 @@ connectAttr "annotationLocator9Shape.wm" "annotationShape9.dom" -na;
 connectAttr "annotation9.pim" "annotation9_pointConstraint1.cpim";
 connectAttr "annotation9.rp" "annotation9_pointConstraint1.crp";
 connectAttr "annotation9.rpt" "annotation9_pointConstraint1.crt";
-connectAttr "|cam_tfm2|marker_tfm3.t" "annotation9_pointConstraint1.tg[0].tt";
-connectAttr "|cam_tfm2|marker_tfm3.rp" "annotation9_pointConstraint1.tg[0].trp";
-connectAttr "|cam_tfm2|marker_tfm3.rpt" "annotation9_pointConstraint1.tg[0].trt"
+connectAttr "|cam_tfm2|marker_group|marker_tfm3.t" "annotation9_pointConstraint1.tg[0].tt"
 		;
-connectAttr "|cam_tfm2|marker_tfm3.pm" "annotation9_pointConstraint1.tg[0].tpm";
+connectAttr "|cam_tfm2|marker_group|marker_tfm3.rp" "annotation9_pointConstraint1.tg[0].trp"
+		;
+connectAttr "|cam_tfm2|marker_group|marker_tfm3.rpt" "annotation9_pointConstraint1.tg[0].trt"
+		;
+connectAttr "|cam_tfm2|marker_group|marker_tfm3.pm" "annotation9_pointConstraint1.tg[0].tpm"
+		;
 connectAttr "annotation9_pointConstraint1.w0" "annotation9_pointConstraint1.tg[0].tw"
 		;
 connectAttr "annotation4_pointConstraint1.ctx" "annotation4.tx";
@@ -1166,11 +1196,14 @@ connectAttr "annotationLocator4Shape.wm" "annotationShape4.dom" -na;
 connectAttr "annotation4.pim" "annotation4_pointConstraint1.cpim";
 connectAttr "annotation4.rp" "annotation4_pointConstraint1.crp";
 connectAttr "annotation4.rpt" "annotation4_pointConstraint1.crt";
-connectAttr "|cam_tfm1|marker_tfm4.t" "annotation4_pointConstraint1.tg[0].tt";
-connectAttr "|cam_tfm1|marker_tfm4.rp" "annotation4_pointConstraint1.tg[0].trp";
-connectAttr "|cam_tfm1|marker_tfm4.rpt" "annotation4_pointConstraint1.tg[0].trt"
+connectAttr "|cam_tfm1|marker_group|marker_tfm4.t" "annotation4_pointConstraint1.tg[0].tt"
 		;
-connectAttr "|cam_tfm1|marker_tfm4.pm" "annotation4_pointConstraint1.tg[0].tpm";
+connectAttr "|cam_tfm1|marker_group|marker_tfm4.rp" "annotation4_pointConstraint1.tg[0].trp"
+		;
+connectAttr "|cam_tfm1|marker_group|marker_tfm4.rpt" "annotation4_pointConstraint1.tg[0].trt"
+		;
+connectAttr "|cam_tfm1|marker_group|marker_tfm4.pm" "annotation4_pointConstraint1.tg[0].tpm"
+		;
 connectAttr "annotation4_pointConstraint1.w0" "annotation4_pointConstraint1.tg[0].tw"
 		;
 connectAttr "annotation10_pointConstraint1.ctx" "annotation10.tx";
@@ -1180,12 +1213,13 @@ connectAttr "annotationLocator10Shape.wm" "annotationShape10.dom" -na;
 connectAttr "annotation10.pim" "annotation10_pointConstraint1.cpim";
 connectAttr "annotation10.rp" "annotation10_pointConstraint1.crp";
 connectAttr "annotation10.rpt" "annotation10_pointConstraint1.crt";
-connectAttr "|cam_tfm2|marker_tfm4.t" "annotation10_pointConstraint1.tg[0].tt";
-connectAttr "|cam_tfm2|marker_tfm4.rp" "annotation10_pointConstraint1.tg[0].trp"
+connectAttr "|cam_tfm2|marker_group|marker_tfm4.t" "annotation10_pointConstraint1.tg[0].tt"
 		;
-connectAttr "|cam_tfm2|marker_tfm4.rpt" "annotation10_pointConstraint1.tg[0].trt"
+connectAttr "|cam_tfm2|marker_group|marker_tfm4.rp" "annotation10_pointConstraint1.tg[0].trp"
 		;
-connectAttr "|cam_tfm2|marker_tfm4.pm" "annotation10_pointConstraint1.tg[0].tpm"
+connectAttr "|cam_tfm2|marker_group|marker_tfm4.rpt" "annotation10_pointConstraint1.tg[0].trt"
+		;
+connectAttr "|cam_tfm2|marker_group|marker_tfm4.pm" "annotation10_pointConstraint1.tg[0].tpm"
 		;
 connectAttr "annotation10_pointConstraint1.w0" "annotation10_pointConstraint1.tg[0].tw"
 		;
@@ -1196,11 +1230,14 @@ connectAttr "annotationLocator5Shape.wm" "annotationShape5.dom" -na;
 connectAttr "annotation5.pim" "annotation5_pointConstraint1.cpim";
 connectAttr "annotation5.rp" "annotation5_pointConstraint1.crp";
 connectAttr "annotation5.rpt" "annotation5_pointConstraint1.crt";
-connectAttr "|cam_tfm1|marker_tfm5.t" "annotation5_pointConstraint1.tg[0].tt";
-connectAttr "|cam_tfm1|marker_tfm5.rp" "annotation5_pointConstraint1.tg[0].trp";
-connectAttr "|cam_tfm1|marker_tfm5.rpt" "annotation5_pointConstraint1.tg[0].trt"
+connectAttr "|cam_tfm1|marker_group|marker_tfm5.t" "annotation5_pointConstraint1.tg[0].tt"
 		;
-connectAttr "|cam_tfm1|marker_tfm5.pm" "annotation5_pointConstraint1.tg[0].tpm";
+connectAttr "|cam_tfm1|marker_group|marker_tfm5.rp" "annotation5_pointConstraint1.tg[0].trp"
+		;
+connectAttr "|cam_tfm1|marker_group|marker_tfm5.rpt" "annotation5_pointConstraint1.tg[0].trt"
+		;
+connectAttr "|cam_tfm1|marker_group|marker_tfm5.pm" "annotation5_pointConstraint1.tg[0].tpm"
+		;
 connectAttr "annotation5_pointConstraint1.w0" "annotation5_pointConstraint1.tg[0].tw"
 		;
 connectAttr "annotation11_pointConstraint1.ctx" "annotation11.tx";
@@ -1210,12 +1247,13 @@ connectAttr "annotationLocator11Shape.wm" "annotationShape11.dom" -na;
 connectAttr "annotation11.pim" "annotation11_pointConstraint1.cpim";
 connectAttr "annotation11.rp" "annotation11_pointConstraint1.crp";
 connectAttr "annotation11.rpt" "annotation11_pointConstraint1.crt";
-connectAttr "|cam_tfm2|marker_tfm5.t" "annotation11_pointConstraint1.tg[0].tt";
-connectAttr "|cam_tfm2|marker_tfm5.rp" "annotation11_pointConstraint1.tg[0].trp"
+connectAttr "|cam_tfm2|marker_group|marker_tfm5.t" "annotation11_pointConstraint1.tg[0].tt"
 		;
-connectAttr "|cam_tfm2|marker_tfm5.rpt" "annotation11_pointConstraint1.tg[0].trt"
+connectAttr "|cam_tfm2|marker_group|marker_tfm5.rp" "annotation11_pointConstraint1.tg[0].trp"
 		;
-connectAttr "|cam_tfm2|marker_tfm5.pm" "annotation11_pointConstraint1.tg[0].tpm"
+connectAttr "|cam_tfm2|marker_group|marker_tfm5.rpt" "annotation11_pointConstraint1.tg[0].trt"
+		;
+connectAttr "|cam_tfm2|marker_group|marker_tfm5.pm" "annotation11_pointConstraint1.tg[0].tpm"
 		;
 connectAttr "annotation11_pointConstraint1.w0" "annotation11_pointConstraint1.tg[0].tw"
 		;
@@ -1226,11 +1264,14 @@ connectAttr "annotationLocator6Shape.wm" "annotationShape6.dom" -na;
 connectAttr "annotation6.pim" "annotation6_pointConstraint1.cpim";
 connectAttr "annotation6.rp" "annotation6_pointConstraint1.crp";
 connectAttr "annotation6.rpt" "annotation6_pointConstraint1.crt";
-connectAttr "|cam_tfm1|marker_tfm6.t" "annotation6_pointConstraint1.tg[0].tt";
-connectAttr "|cam_tfm1|marker_tfm6.rp" "annotation6_pointConstraint1.tg[0].trp";
-connectAttr "|cam_tfm1|marker_tfm6.rpt" "annotation6_pointConstraint1.tg[0].trt"
+connectAttr "|cam_tfm1|marker_group|marker_tfm6.t" "annotation6_pointConstraint1.tg[0].tt"
 		;
-connectAttr "|cam_tfm1|marker_tfm6.pm" "annotation6_pointConstraint1.tg[0].tpm";
+connectAttr "|cam_tfm1|marker_group|marker_tfm6.rp" "annotation6_pointConstraint1.tg[0].trp"
+		;
+connectAttr "|cam_tfm1|marker_group|marker_tfm6.rpt" "annotation6_pointConstraint1.tg[0].trt"
+		;
+connectAttr "|cam_tfm1|marker_group|marker_tfm6.pm" "annotation6_pointConstraint1.tg[0].tpm"
+		;
 connectAttr "annotation6_pointConstraint1.w0" "annotation6_pointConstraint1.tg[0].tw"
 		;
 connectAttr "annotation12_pointConstraint1.ctx" "annotation12.tx";
@@ -1240,12 +1281,13 @@ connectAttr "annotationLocator12Shape.wm" "annotationShape12.dom" -na;
 connectAttr "annotation12.pim" "annotation12_pointConstraint1.cpim";
 connectAttr "annotation12.rp" "annotation12_pointConstraint1.crp";
 connectAttr "annotation12.rpt" "annotation12_pointConstraint1.crt";
-connectAttr "|cam_tfm2|marker_tfm6.t" "annotation12_pointConstraint1.tg[0].tt";
-connectAttr "|cam_tfm2|marker_tfm6.rp" "annotation12_pointConstraint1.tg[0].trp"
+connectAttr "|cam_tfm2|marker_group|marker_tfm6.t" "annotation12_pointConstraint1.tg[0].tt"
 		;
-connectAttr "|cam_tfm2|marker_tfm6.rpt" "annotation12_pointConstraint1.tg[0].trt"
+connectAttr "|cam_tfm2|marker_group|marker_tfm6.rp" "annotation12_pointConstraint1.tg[0].trp"
 		;
-connectAttr "|cam_tfm2|marker_tfm6.pm" "annotation12_pointConstraint1.tg[0].tpm"
+connectAttr "|cam_tfm2|marker_group|marker_tfm6.rpt" "annotation12_pointConstraint1.tg[0].trt"
+		;
+connectAttr "|cam_tfm2|marker_group|marker_tfm6.pm" "annotation12_pointConstraint1.tg[0].tpm"
 		;
 connectAttr "annotation12_pointConstraint1.w0" "annotation12_pointConstraint1.tg[0].tw"
 		;
@@ -1273,6 +1315,12 @@ connectAttr "bundle_tfm5.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[9].dn";
 connectAttr "bundle_tfmShape6.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[10].dn"
 		;
 connectAttr "bundle_tfm6.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[11].dn";
+connectAttr "cam_tfmShape1.fl" "mmMarkerScale1.fl";
+connectAttr "cam_tfmShape1.cap" "mmMarkerScale1.cap";
+connectAttr "cam_tfmShape1.fio" "mmMarkerScale1.fio";
+connectAttr "cam_tfmShape2.fl" "mmMarkerScale2.fl";
+connectAttr "cam_tfmShape2.cap" "mmMarkerScale2.cap";
+connectAttr "cam_tfmShape2.fio" "mmMarkerScale2.fio";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "box1Shape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "boxShape2.iog" ":initialShadingGroup.dsm" -na;
