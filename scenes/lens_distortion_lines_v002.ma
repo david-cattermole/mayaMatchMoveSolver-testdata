@@ -1618,117 +1618,117 @@ createNode script -n "mmSolver_data_node";
 	setAttr -l on ".mmSolver_data" -type "string" "{\"active_collection_uid\": \"A99FE17A-43F8-55F3-2B56-A5935501B544\", \"display_object_weight\": true, \"display_object_frame_deviation\": false, \"display_object_average_deviation\": true, \"display_object_maximum_deviation\": false, \"display_attribute_state\": true, \"display_attribute_min_max\": true, \"display_attribute_stiffness\": false, \"display_attribute_smoothness\": false}";
 createNode mmLensModel3de -n "lens1";
 	rename -uid "872ECB9B-42D4-8311-1C11-2B963B955F39";
-	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree2_distortion_used_hint" 
-		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree2_distortion_used_hint" 
+	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree2_distortion_used_hint"
+		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree2_distortion_used_hint"
 		-at "long";
-	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree2_distortion_min_enable" 
-		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree2_distortion_min_enable" 
+	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree2_distortion_min_enable"
+		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree2_distortion_min_enable"
 		-min 0 -max 1 -at "bool";
-	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree2_distortion_max_enable" 
-		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree2_distortion_max_enable" 
+	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree2_distortion_max_enable"
+		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree2_distortion_max_enable"
 		-min 0 -max 1 -at "bool";
-	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree2_distortion_min_value" 
-		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree2_distortion_min_value" 
+	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree2_distortion_min_value"
+		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree2_distortion_min_value"
 		-at "double";
-	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree2_distortion_max_value" 
-		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree2_distortion_max_value" 
+	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree2_distortion_max_value"
+		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree2_distortion_max_value"
 		-at "double";
-	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree4_distortion_used_hint" 
-		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree4_distortion_used_hint" 
+	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree4_distortion_used_hint"
+		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree4_distortion_used_hint"
 		-at "long";
-	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree4_distortion_min_enable" 
-		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree4_distortion_min_enable" 
+	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree4_distortion_min_enable"
+		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree4_distortion_min_enable"
 		-min 0 -max 1 -at "bool";
-	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree4_distortion_max_enable" 
-		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree4_distortion_max_enable" 
+	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree4_distortion_max_enable"
+		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree4_distortion_max_enable"
 		-min 0 -max 1 -at "bool";
-	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree4_distortion_min_value" 
-		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree4_distortion_min_value" 
+	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree4_distortion_min_value"
+		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree4_distortion_min_value"
 		-at "double";
-	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree4_distortion_max_value" 
-		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree4_distortion_max_value" 
+	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree4_distortion_max_value"
+		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree4_distortion_max_value"
 		-at "double";
-	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree2_distortion_stiffness_enable" 
-		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree2_distortion_stiffness_enable" 
+	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree2_distortion_stiffness_enable"
+		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree2_distortion_stiffness_enable"
 		-min 0 -max 1 -at "bool";
-	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree2_distortion_stiffness_weight" 
-		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree2_distortion_stiffness_weight" 
+	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree2_distortion_stiffness_weight"
+		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree2_distortion_stiffness_weight"
 		-at "double";
-	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree4_distortion_stiffness_enable" 
-		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree4_distortion_stiffness_enable" 
+	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree4_distortion_stiffness_enable"
+		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree4_distortion_stiffness_enable"
 		-min 0 -max 1 -at "bool";
-	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree4_distortion_stiffness_weight" 
-		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree4_distortion_stiffness_weight" 
+	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree4_distortion_stiffness_weight"
+		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree4_distortion_stiffness_weight"
 		-at "double";
-	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree2_distortion_smoothness_enable" 
-		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree2_distortion_smoothness_enable" 
+	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree2_distortion_smoothness_enable"
+		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree2_distortion_smoothness_enable"
 		-min 0 -max 1 -at "bool";
-	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree2_distortion_smoothness_weight" 
-		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree2_distortion_smoothness_weight" 
+	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree2_distortion_smoothness_weight"
+		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree2_distortion_smoothness_weight"
 		-at "double";
-	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree4_distortion_smoothness_enable" 
-		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree4_distortion_smoothness_enable" 
+	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree4_distortion_smoothness_enable"
+		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree4_distortion_smoothness_enable"
 		-min 0 -max 1 -at "bool";
-	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree4_distortion_smoothness_weight" 
-		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree4_distortion_smoothness_weight" 
+	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree4_distortion_smoothness_weight"
+		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree4_distortion_smoothness_weight"
 		-at "double";
-	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree2_distortion_previous_value" 
-		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree2_distortion_previous_value" 
+	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree2_distortion_previous_value"
+		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree2_distortion_previous_value"
 		-at "double";
-	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree2_distortion_mean_value" 
-		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree2_distortion_mean_value" 
+	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree2_distortion_mean_value"
+		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree2_distortion_mean_value"
 		-at "double";
-	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree2_distortion_variance_value" 
-		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree2_distortion_variance_value" 
+	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree2_distortion_variance_value"
+		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree2_distortion_variance_value"
 		-at "double";
-	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree4_distortion_previous_value" 
-		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree4_distortion_previous_value" 
+	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree4_distortion_previous_value"
+		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree4_distortion_previous_value"
 		-at "double";
-	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree4_distortion_mean_value" 
-		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree4_distortion_mean_value" 
+	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree4_distortion_mean_value"
+		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree4_distortion_mean_value"
 		-at "double";
-	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree4_distortion_variance_value" 
-		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree4_distortion_variance_value" 
+	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree4_distortion_variance_value"
+		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree4_distortion_variance_value"
 		-at "double";
-	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree2_distortion_smoothness_variance" 
-		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree2_distortion_smoothness_variance" 
+	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree2_distortion_smoothness_variance"
+		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree2_distortion_smoothness_variance"
 		-at "double";
-	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree4_distortion_smoothness_variance" 
-		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree4_distortion_smoothness_variance" 
+	addAttr -ci true -h true -sn "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree4_distortion_smoothness_variance"
+		-ln "aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree4_distortion_smoothness_variance"
 		-at "double";
-	setAttr -av ".tdeRadialDeg4_degree2_distortion" 0;
-	setAttr -av ".tdeRadialDeg4_degree4_distortion" 0;
-	setAttr ".aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree2_distortion_min_value" 
+	setAttr -av ".tdeRadialStdDeg4_degree2_distortion" 0;
+	setAttr -av ".tdeRadialStdDeg4_degree4_distortion" 0;
+	setAttr ".aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree2_distortion_min_value"
 		-1;
-	setAttr ".aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree2_distortion_max_value" 
+	setAttr ".aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree2_distortion_max_value"
 		1;
-	setAttr ".aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree4_distortion_min_value" 
+	setAttr ".aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree4_distortion_min_value"
 		-1;
-	setAttr ".aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree4_distortion_max_value" 
+	setAttr ".aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree4_distortion_max_value"
 		1;
-	setAttr ".aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree2_distortion_stiffness_weight" 
+	setAttr ".aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree2_distortion_stiffness_weight"
 		1;
-	setAttr ".aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree4_distortion_stiffness_weight" 
+	setAttr ".aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree4_distortion_stiffness_weight"
 		1;
-	setAttr ".aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree2_distortion_smoothness_weight" 
+	setAttr ".aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree2_distortion_smoothness_weight"
 		1;
-	setAttr ".aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree4_distortion_smoothness_weight" 
+	setAttr ".aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree4_distortion_smoothness_weight"
 		1;
-	setAttr ".aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree2_distortion_previous_value" 
+	setAttr ".aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree2_distortion_previous_value"
 		-0.020751195760674249;
-	setAttr ".aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree2_distortion_mean_value" 
+	setAttr ".aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree2_distortion_mean_value"
 		-0.020751195760674249;
-	setAttr ".aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree2_distortion_variance_value" 
+	setAttr ".aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree2_distortion_variance_value"
 		1.9999990000009999;
-	setAttr ".aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree4_distortion_previous_value" 
+	setAttr ".aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree4_distortion_previous_value"
 		0.027018953664290569;
-	setAttr ".aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree4_distortion_mean_value" 
+	setAttr ".aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree4_distortion_mean_value"
 		0.027018953664290569;
-	setAttr ".aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree4_distortion_variance_value" 
+	setAttr ".aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree4_distortion_variance_value"
 		1.9999990000009999;
-	setAttr ".aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree2_distortion_smoothness_variance" 
+	setAttr ".aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree2_distortion_smoothness_variance"
 		1;
-	setAttr ".aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialDeg4_degree4_distortion_smoothness_variance" 
+	setAttr ".aux_A99FE17A_43F8_55F3_2B56_A5935501B544_tdeRadialStdDeg4_degree4_distortion_smoothness_variance"
 		1;
 createNode mmLinePointIntersect -n "mmLinePointIntersect3";
 	rename -uid "A3304DD6-4876-AB11-B9B9-B299D238B3B6";
@@ -1793,12 +1793,12 @@ createNode objectSet -n "collection1";
 	setAttr -l on ".solver_eval_object_relationships";
 	setAttr -l on ".solve_timestamp" -type "string" "[1661602487.7517464]";
 	setAttr -l on ".solve_duration" -type "string" "[0.43781518936157227]";
-createNode animCurveTU -n "lens1_tdeRadialDeg4_degree2_distortion";
+createNode animCurveTU -n "lens1_tdeRadialStdDeg4_degree2_distortion";
 	rename -uid "7819A561-45A0-3E51-919B-FD8D84DE35D1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1 0;
-createNode animCurveTU -n "lens1_tdeRadialDeg4_degree4_distortion";
+createNode animCurveTU -n "lens1_tdeRadialStdDeg4_degree4_distortion";
 	rename -uid "27F01D9E-44FD-21D8-B82A-F5BEC622294A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -2798,9 +2798,9 @@ connectAttr "markerGroup1.overscanY" "mmMarkerScale2.ovrscninvy";
 connectAttr "camera1Shape.fl" "mmMarkerScale2.fl";
 connectAttr "camera1Shape.cap" "mmMarkerScale2.cap";
 connectAttr "camera1Shape.fio" "mmMarkerScale2.fio";
-connectAttr "lens1_tdeRadialDeg4_degree2_distortion.o" "lens1.tdeRadialDeg4_degree2_distortion"
+connectAttr "lens1_tdeRadialStdDeg4_degree2_distortion.o" "lens1.tdeRadialStdDeg4_degree2_distortion"
 		;
-connectAttr "lens1_tdeRadialDeg4_degree4_distortion.o" "lens1.tdeRadialDeg4_degree4_distortion"
+connectAttr "lens1_tdeRadialStdDeg4_degree4_distortion.o" "lens1.tdeRadialStdDeg4_degree4_distortion"
 		;
 connectAttr "line1_LNShape.opax" "mmLinePointIntersect3.lnpntax";
 connectAttr "line1_LNShape.opay" "mmLinePointIntersect3.lnpntay";
@@ -2830,8 +2830,8 @@ connectAttr "marker18_MKR.iog" "collection1.dsm" -na;
 connectAttr "marker17_MKR.iog" "collection1.dsm" -na;
 connectAttr "marker16_MKR.iog" "collection1.dsm" -na;
 connectAttr "marker15_MKR.iog" "collection1.dsm" -na;
-connectAttr "lens1.tdeRadialDeg4_degree4_distortion" "collection1.dnsm" -na;
-connectAttr "lens1.tdeRadialDeg4_degree2_distortion" "collection1.dnsm" -na;
+connectAttr "lens1.tdeRadialStdDeg4_degree4_distortion" "collection1.dnsm" -na;
+connectAttr "lens1.tdeRadialStdDeg4_degree2_distortion" "collection1.dnsm" -na;
 connectAttr "line1_LNShape.opax" "mmLinePointIntersect4.lnpntax";
 connectAttr "line1_LNShape.opay" "mmLinePointIntersect4.lnpntay";
 connectAttr "line1_LNShape.opbx" "mmLinePointIntersect4.lnpntbx";
@@ -3019,7 +3019,7 @@ connectAttr "marker5_MKR.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[49].dn";
 connectAttr "mmLinePointIntersect5.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[50].dn"
 		;
 connectAttr "bundle10_BND.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[51].dn";
-connectAttr "lens1_tdeRadialDeg4_degree4_distortion.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[52].dn"
+connectAttr "lens1_tdeRadialStdDeg4_degree4_distortion.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[52].dn"
 		;
 connectAttr "marker5_MKR_deviation.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[53].dn"
 		;
@@ -3045,7 +3045,7 @@ connectAttr "bundle6_BNDShape.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[65].dn
 		;
 connectAttr "marker4_MKRShape.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[66].dn"
 		;
-connectAttr "lens1_tdeRadialDeg4_degree2_distortion.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[67].dn"
+connectAttr "lens1_tdeRadialStdDeg4_degree2_distortion.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[67].dn"
 		;
 connectAttr "marker6_MKRShape.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[68].dn"
 		;
