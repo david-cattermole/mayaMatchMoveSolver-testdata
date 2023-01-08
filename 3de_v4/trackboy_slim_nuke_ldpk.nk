@@ -1,0 +1,24 @@
+# Created by 3DEqualizer4 using Export Nuke Distortion Nodes export script
+LD_3DE4_Radial_Standard_Degree_4 {
+ direction undistort
+ tde4_focal_length_cm 3.1260313 
+ tde4_custom_focus_distance_cm 91.4400000 
+ tde4_filmback_width_cm 2.8029668 
+ tde4_filmback_height_cm 1.8647837 
+ tde4_lens_center_offset_x_cm 0.0000000 
+ tde4_lens_center_offset_y_cm 0.0000000 
+ tde4_pixel_aspect 1.0000000 
+ field_of_view_xa_unit 0.0000000 
+ field_of_view_xb_unit 1.0000000 
+ field_of_view_ya_unit 0.0000000 
+ field_of_view_yb_unit 1.0000000 
+ Distortion_Degree_2 0.0276211 
+ U_Degree_2 -0.0017601 
+ V_Degree_2 -0.0012367 
+ Quartic_Distortion_Degree_4 0.0080943 
+ U_Degree_4 0.0030848 
+ V_Degree_4 0.0000368 
+ Phi_Cylindric_Direction 0.0000000 
+ B_Cylindric_Bending 0.0000000 
+ name LD_3DE4_trackboy
+}

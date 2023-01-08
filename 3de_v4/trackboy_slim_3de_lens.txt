@@ -1,0 +1,47 @@
+default lens
+2.802966816071098 1.864783708212590 3.126031329857188 1.503105590062112 0.000000000000000 0.000000000000000 1.000000000000000
+DISTORTION_STATIC
+3DE4 Radial - Standard, Degree 4
+Distortion - Degree 2
+0.027621144181971
+0
+U - Degree 2
+-0.001760125699306
+0
+V - Degree 2
+-0.001236746823497
+0
+Quartic Distortion - Degree 4
+0.008094310423922
+0
+U - Degree 4
+0.003084795726708
+0
+V - Degree 4
+0.000036773362260
+0
+Phi - Cylindric Direction
+0.000000000000000
+0
+B - Cylindric Bending
+0.000000000000000
+0
+<end_of_file>
+<begin_2dlut_samples>
+Distortion - Degree 2
+0
+U - Degree 2
+0
+V - Degree 2
+0
+Quartic Distortion - Degree 4
+0
+U - Degree 4
+0
+V - Degree 4
+0
+Phi - Cylindric Direction
+0
+B - Cylindric Bending
+0
+<end_2dlut_samples>

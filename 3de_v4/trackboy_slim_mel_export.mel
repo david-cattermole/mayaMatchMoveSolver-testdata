@@ -1,0 +1,2722 @@
+//
+// Maya/MEL export data written by 3DEqualizer4 Release 6b4
+//
+// All lengths are in centimeter, all angles are in degree.
+//
+
+// create scene group...
+string $sceneGroupName = `group -em -name "Scene"`;
+
+// create camera trackboy_1_1...
+string $cameraNodes[] = `camera -name "trackboy_1_1" -hfa 1.153690106192439  -vfa 0.769507108528085 -fl 31.260313298571884 -ncp 0.01 -fcp 10000 -shutterAngle 180 -ff "overscan"`;
+string $cameraTransform = $cameraNodes[0];
+string $cameraShape = $cameraNodes[1];
+xform -zeroTransformPivots -rotateOrder zxy $cameraTransform;
+setAttr ($cameraShape+".horizontalFilmOffset") -0.000000000000000;
+setAttr ($cameraShape+".verticalFilmOffset") -0.000000000000000;
+xform -translation 342.886216565747702 115.997801494313364 384.988035277453207 $cameraTransform;
+xform -rotation -0.013431248796148 37.026364091930304 -0.551879943045484 $cameraTransform;
+xform -scale 1 1 1 $cameraTransform;
+
+// create image plane...
+string $myImagePlane[] = `imagePlane -camera $cameraTransform` ;
+setAttr ($myImagePlane[1] + ".offsetX") -0.000000000000000;
+setAttr ($myImagePlane[1] + ".offsetY") -0.000000000000000;
+setAttr ($myImagePlane[1]+".useFrameExtension") 1;
+expression -n "frame_ext_expression" -s ($myImagePlane[1]+".frameExtension=frame");
+setAttr ($myImagePlane[1] + ".imageName") -type "string" "/mnt/users/patcha/Documents/trackBoy_slim/trackboy_slim_plate/trackboy.0000.jpg";
+setAttr ($myImagePlane[1] + ".fit") 4;
+setAttr ($myImagePlane[1] + ".displayOnlyIfCurrent") 1;
+setAttr ($myImagePlane[1]  + ".depth") (9000/2);
+
+// parent camera to scene group...
+parent $cameraTransform $sceneGroupName;
+
+// animating camera trackboy_1_1...
+playbackOptions -min 0 -max 71;
+
+setKeyframe -at translateX -t 0 -v 342.886216565747702 $cameraTransform; 
+setKeyframe -at translateY -t 0 -v 115.997801494313364 $cameraTransform; 
+setKeyframe -at translateZ -t 0 -v 384.988035277453207 $cameraTransform; 
+setKeyframe -at rotateX -t 0 -v -0.013431248796148 $cameraTransform; 
+setKeyframe -at rotateY -t 0 -v 37.026364091930304 $cameraTransform; 
+setKeyframe -at rotateZ -t 0 -v -0.551879943045484 $cameraTransform; 
+setKeyframe -at focalLength -t 0 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 1 -v 341.091603547728141 $cameraTransform; 
+setKeyframe -at translateY -t 1 -v 115.973585776965365 $cameraTransform; 
+setKeyframe -at translateZ -t 1 -v 386.553559208422769 $cameraTransform; 
+setKeyframe -at rotateX -t 1 -v 0.023323684097048 $cameraTransform; 
+setKeyframe -at rotateY -t 1 -v 36.523462993961878 $cameraTransform; 
+setKeyframe -at rotateZ -t 1 -v -0.547292522200941 $cameraTransform; 
+setKeyframe -at focalLength -t 1 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 2 -v 339.253676598217226 $cameraTransform; 
+setKeyframe -at translateY -t 2 -v 115.939349001396266 $cameraTransform; 
+setKeyframe -at translateZ -t 2 -v 388.115507651383552 $cameraTransform; 
+setKeyframe -at rotateX -t 2 -v -0.010545573775087 $cameraTransform; 
+setKeyframe -at rotateY -t 2 -v 35.994733182662593 $cameraTransform; 
+setKeyframe -at rotateZ -t 2 -v -0.529107251281728 $cameraTransform; 
+setKeyframe -at focalLength -t 2 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 3 -v 337.382068586676269 $cameraTransform; 
+setKeyframe -at translateY -t 3 -v 115.896505972615287 $cameraTransform; 
+setKeyframe -at translateZ -t 3 -v 389.668639635151976 $cameraTransform; 
+setKeyframe -at rotateX -t 3 -v -0.049929063098183 $cameraTransform; 
+setKeyframe -at rotateY -t 3 -v 35.471768805300911 $cameraTransform; 
+setKeyframe -at rotateZ -t 3 -v -0.499587602769675 $cameraTransform; 
+setKeyframe -at focalLength -t 3 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 4 -v 335.526830826217008 $cameraTransform; 
+setKeyframe -at translateY -t 4 -v 115.852926612642776 $cameraTransform; 
+setKeyframe -at translateZ -t 4 -v 391.194976825137871 $cameraTransform; 
+setKeyframe -at rotateX -t 4 -v -0.046680596767513 $cameraTransform; 
+setKeyframe -at rotateY -t 4 -v 34.921824788240492 $cameraTransform; 
+setKeyframe -at rotateZ -t 4 -v -0.495441552877572 $cameraTransform; 
+setKeyframe -at focalLength -t 4 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 5 -v 333.736222827421386 $cameraTransform; 
+setKeyframe -at translateY -t 5 -v 115.816313655745361 $cameraTransform; 
+setKeyframe -at translateZ -t 5 -v 392.662227146573741 $cameraTransform; 
+setKeyframe -at rotateX -t 5 -v -0.041748448077543 $cameraTransform; 
+setKeyframe -at rotateY -t 5 -v 34.395986992087970 $cameraTransform; 
+setKeyframe -at rotateZ -t 5 -v -0.488179236025915 $cameraTransform; 
+setKeyframe -at focalLength -t 5 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 6 -v 332.032491046100063 $cameraTransform; 
+setKeyframe -at translateY -t 6 -v 115.793766311961576 $cameraTransform; 
+setKeyframe -at translateZ -t 6 -v 394.046946584135242 $cameraTransform; 
+setKeyframe -at rotateX -t 6 -v -0.050463338391428 $cameraTransform; 
+setKeyframe -at rotateY -t 6 -v 33.913882203285681 $cameraTransform; 
+setKeyframe -at rotateZ -t 6 -v -0.495071041814500 $cameraTransform; 
+setKeyframe -at focalLength -t 6 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 7 -v 330.405324680874685 $cameraTransform; 
+setKeyframe -at translateY -t 7 -v 115.784864387286447 $cameraTransform; 
+setKeyframe -at translateZ -t 7 -v 395.354729249237209 $cameraTransform; 
+setKeyframe -at rotateX -t 7 -v -0.048438612231404 $cameraTransform; 
+setKeyframe -at rotateY -t 7 -v 33.430606953594875 $cameraTransform; 
+setKeyframe -at rotateZ -t 7 -v -0.499425090930007 $cameraTransform; 
+setKeyframe -at focalLength -t 7 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 8 -v 328.827563858457722 $cameraTransform; 
+setKeyframe -at translateY -t 8 -v 115.784679678861778 $cameraTransform; 
+setKeyframe -at translateZ -t 8 -v 396.607779976432880 $cameraTransform; 
+setKeyframe -at rotateX -t 8 -v -0.036343499816880 $cameraTransform; 
+setKeyframe -at rotateY -t 8 -v 32.968676722163536 $cameraTransform; 
+setKeyframe -at rotateZ -t 8 -v -0.493025469571982 $cameraTransform; 
+setKeyframe -at focalLength -t 8 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 9 -v 327.286264706853842 $cameraTransform; 
+setKeyframe -at translateY -t 9 -v 115.794508777761223 $cameraTransform; 
+setKeyframe -at translateZ -t 9 -v 397.813580876228798 $cameraTransform; 
+setKeyframe -at rotateX -t 9 -v -0.025903889027865 $cameraTransform; 
+setKeyframe -at rotateY -t 9 -v 32.516371211488661 $cameraTransform; 
+setKeyframe -at rotateZ -t 9 -v -0.468833478883217 $cameraTransform; 
+setKeyframe -at focalLength -t 9 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 10 -v 325.790307670059974 $cameraTransform; 
+setKeyframe -at translateY -t 10 -v 115.805412258269229 $cameraTransform; 
+setKeyframe -at translateZ -t 10 -v 398.952988830757761 $cameraTransform; 
+setKeyframe -at rotateX -t 10 -v -0.025669775279559 $cameraTransform; 
+setKeyframe -at rotateY -t 10 -v 32.139934051052059 $cameraTransform; 
+setKeyframe -at rotateZ -t 10 -v -0.412875168030083 $cameraTransform; 
+setKeyframe -at focalLength -t 10 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 11 -v 324.347091372068917 $cameraTransform; 
+setKeyframe -at translateY -t 11 -v 115.789100389567622 $cameraTransform; 
+setKeyframe -at translateZ -t 11 -v 400.005856696937485 $cameraTransform; 
+setKeyframe -at rotateX -t 11 -v -0.016762861363074 $cameraTransform; 
+setKeyframe -at rotateY -t 11 -v 31.752452928845909 $cameraTransform; 
+setKeyframe -at rotateZ -t 11 -v -0.397084794410860 $cameraTransform; 
+setKeyframe -at focalLength -t 11 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 12 -v 322.931500037563580 $cameraTransform; 
+setKeyframe -at translateY -t 12 -v 115.734308081010823 $cameraTransform; 
+setKeyframe -at translateZ -t 12 -v 400.995329934965866 $cameraTransform; 
+setKeyframe -at rotateX -t 12 -v -0.014842290549215 $cameraTransform; 
+setKeyframe -at rotateY -t 12 -v 31.369503140748130 $cameraTransform; 
+setKeyframe -at rotateZ -t 12 -v -0.373785586131914 $cameraTransform; 
+setKeyframe -at focalLength -t 12 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 13 -v 321.477904786165709 $cameraTransform; 
+setKeyframe -at translateY -t 13 -v 115.659760222022086 $cameraTransform; 
+setKeyframe -at translateZ -t 13 -v 401.996595887801789 $cameraTransform; 
+setKeyframe -at rotateX -t 13 -v -0.018526319237372 $cameraTransform; 
+setKeyframe -at rotateY -t 13 -v 31.004203428180908 $cameraTransform; 
+setKeyframe -at rotateZ -t 13 -v -0.382871088350536 $cameraTransform; 
+setKeyframe -at focalLength -t 13 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 14 -v 319.910439354956111 $cameraTransform; 
+setKeyframe -at translateY -t 14 -v 115.569978260235146 $cameraTransform; 
+setKeyframe -at translateZ -t 14 -v 403.092737302582236 $cameraTransform; 
+setKeyframe -at rotateX -t 14 -v -0.026818787322442 $cameraTransform; 
+setKeyframe -at rotateY -t 14 -v 30.601168780935012 $cameraTransform; 
+setKeyframe -at rotateZ -t 14 -v -0.368759219716925 $cameraTransform; 
+setKeyframe -at focalLength -t 14 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 15 -v 318.185390308251272 $cameraTransform; 
+setKeyframe -at translateY -t 15 -v 115.443070282008932 $cameraTransform; 
+setKeyframe -at translateZ -t 15 -v 404.327008687846671 $cameraTransform; 
+setKeyframe -at rotateX -t 15 -v -0.029209257752148 $cameraTransform; 
+setKeyframe -at rotateY -t 15 -v 30.173003670026379 $cameraTransform; 
+setKeyframe -at rotateZ -t 15 -v -0.347882085972862 $cameraTransform; 
+setKeyframe -at focalLength -t 15 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 16 -v 316.313915054403253 $cameraTransform; 
+setKeyframe -at translateY -t 16 -v 115.283820731252803 $cameraTransform; 
+setKeyframe -at translateZ -t 16 -v 405.681114286315449 $cameraTransform; 
+setKeyframe -at rotateX -t 16 -v -0.017885643288319 $cameraTransform; 
+setKeyframe -at rotateY -t 16 -v 29.639293302853453 $cameraTransform; 
+setKeyframe -at rotateZ -t 16 -v -0.267985256636562 $cameraTransform; 
+setKeyframe -at focalLength -t 16 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 17 -v 314.344457974092052 $cameraTransform; 
+setKeyframe -at translateY -t 17 -v 115.140872276564025 $cameraTransform; 
+setKeyframe -at translateZ -t 17 -v 407.093422714222584 $cameraTransform; 
+setKeyframe -at rotateX -t 17 -v 0.020216707384172 $cameraTransform; 
+setKeyframe -at rotateY -t 17 -v 29.085309614426961 $cameraTransform; 
+setKeyframe -at rotateZ -t 17 -v -0.280359913168540 $cameraTransform; 
+setKeyframe -at focalLength -t 17 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 18 -v 312.326225993658568 $cameraTransform; 
+setKeyframe -at translateY -t 18 -v 115.054240236973357 $cameraTransform; 
+setKeyframe -at translateZ -t 18 -v 408.500249773782798 $cameraTransform; 
+setKeyframe -at rotateX -t 18 -v 0.060893740629163 $cameraTransform; 
+setKeyframe -at rotateY -t 18 -v 28.513503665989933 $cameraTransform; 
+setKeyframe -at rotateZ -t 18 -v -0.281648537072356 $cameraTransform; 
+setKeyframe -at focalLength -t 18 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 19 -v 310.295045403632514 $cameraTransform; 
+setKeyframe -at translateY -t 19 -v 115.025740817075558 $cameraTransform; 
+setKeyframe -at translateZ -t 19 -v 409.862205823771944 $cameraTransform; 
+setKeyframe -at rotateX -t 19 -v 0.044863083989760 $cameraTransform; 
+setKeyframe -at rotateY -t 19 -v 27.999317433042609 $cameraTransform; 
+setKeyframe -at rotateZ -t 19 -v -0.235967622777936 $cameraTransform; 
+setKeyframe -at focalLength -t 19 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 20 -v 308.280831825944233 $cameraTransform; 
+setKeyframe -at translateY -t 20 -v 115.030253339513180 $cameraTransform; 
+setKeyframe -at translateZ -t 20 -v 411.177431445494108 $cameraTransform; 
+setKeyframe -at rotateX -t 20 -v -0.001379655527673 $cameraTransform; 
+setKeyframe -at rotateY -t 20 -v 27.431957310874768 $cameraTransform; 
+setKeyframe -at rotateZ -t 20 -v -0.218898684724168 $cameraTransform; 
+setKeyframe -at focalLength -t 20 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 21 -v 306.317577198020615 $cameraTransform; 
+setKeyframe -at translateY -t 21 -v 115.038481443231262 $cameraTransform; 
+setKeyframe -at translateZ -t 21 -v 412.460977996370673 $cameraTransform; 
+setKeyframe -at rotateX -t 21 -v 0.015753480693288 $cameraTransform; 
+setKeyframe -at rotateY -t 21 -v 26.866430596234352 $cameraTransform; 
+setKeyframe -at rotateZ -t 21 -v -0.244334411369657 $cameraTransform; 
+setKeyframe -at focalLength -t 21 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 22 -v 304.440564440312357 $cameraTransform; 
+setKeyframe -at translateY -t 22 -v 115.052913420611375 $cameraTransform; 
+setKeyframe -at translateZ -t 22 -v 413.695299894472441 $cameraTransform; 
+setKeyframe -at rotateX -t 22 -v 0.063642239926278 $cameraTransform; 
+setKeyframe -at rotateY -t 22 -v 26.308075827963826 $cameraTransform; 
+setKeyframe -at rotateZ -t 22 -v -0.260650315491373 $cameraTransform; 
+setKeyframe -at focalLength -t 22 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 23 -v 302.676556686622007 $cameraTransform; 
+setKeyframe -at translateY -t 23 -v 115.119382833191906 $cameraTransform; 
+setKeyframe -at translateZ -t 23 -v 414.826993380786689 $cameraTransform; 
+setKeyframe -at rotateX -t 23 -v 0.105557825572373 $cameraTransform; 
+setKeyframe -at rotateY -t 23 -v 25.808674858812786 $cameraTransform; 
+setKeyframe -at rotateZ -t 23 -v -0.287402252766890 $cameraTransform; 
+setKeyframe -at focalLength -t 23 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 24 -v 301.037547889150233 $cameraTransform; 
+setKeyframe -at translateY -t 24 -v 115.271027889689762 $cameraTransform; 
+setKeyframe -at translateZ -t 24 -v 415.814814163591677 $cameraTransform; 
+setKeyframe -at rotateX -t 24 -v 0.101408053107253 $cameraTransform; 
+setKeyframe -at rotateY -t 24 -v 25.416440016566035 $cameraTransform; 
+setKeyframe -at rotateZ -t 24 -v -0.314263299704475 $cameraTransform; 
+setKeyframe -at focalLength -t 24 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 25 -v 299.512519228990527 $cameraTransform; 
+setKeyframe -at translateY -t 25 -v 115.455517671290380 $cameraTransform; 
+setKeyframe -at translateZ -t 25 -v 416.670695376669357 $cameraTransform; 
+setKeyframe -at rotateX -t 25 -v 0.047794633274773 $cameraTransform; 
+setKeyframe -at rotateY -t 25 -v 25.001891023521001 $cameraTransform; 
+setKeyframe -at rotateZ -t 25 -v -0.301383032586800 $cameraTransform; 
+setKeyframe -at focalLength -t 25 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 26 -v 298.066569628605464 $cameraTransform; 
+setKeyframe -at translateY -t 26 -v 115.575966608621243 $cameraTransform; 
+setKeyframe -at translateZ -t 26 -v 417.455000150508909 $cameraTransform; 
+setKeyframe -at rotateX -t 26 -v -0.006242359795355 $cameraTransform; 
+setKeyframe -at rotateY -t 26 -v 24.660946692358660 $cameraTransform; 
+setKeyframe -at rotateZ -t 26 -v -0.314702953374890 $cameraTransform; 
+setKeyframe -at focalLength -t 26 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 27 -v 296.661190488704733 $cameraTransform; 
+setKeyframe -at translateY -t 27 -v 115.606102852531052 $cameraTransform; 
+setKeyframe -at translateZ -t 27 -v 418.225311449270976 $cameraTransform; 
+setKeyframe -at rotateX -t 27 -v -0.002027259466333 $cameraTransform; 
+setKeyframe -at rotateY -t 27 -v 24.297790122318805 $cameraTransform; 
+setKeyframe -at rotateZ -t 27 -v -0.352794524098551 $cameraTransform; 
+setKeyframe -at focalLength -t 27 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 28 -v 295.266398043004415 $cameraTransform; 
+setKeyframe -at translateY -t 28 -v 115.592319291176096 $cameraTransform; 
+setKeyframe -at translateZ -t 28 -v 419.001269926057887 $cameraTransform; 
+setKeyframe -at rotateX -t 28 -v 0.008210725528842 $cameraTransform; 
+setKeyframe -at rotateY -t 28 -v 23.940581523654394 $cameraTransform; 
+setKeyframe -at rotateZ -t 28 -v -0.373986134089342 $cameraTransform; 
+setKeyframe -at focalLength -t 28 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 29 -v 293.848737859131859 $cameraTransform; 
+setKeyframe -at translateY -t 29 -v 115.574582495806922 $cameraTransform; 
+setKeyframe -at translateZ -t 29 -v 419.782621901409016 $cameraTransform; 
+setKeyframe -at rotateX -t 29 -v 0.001428821356660 $cameraTransform; 
+setKeyframe -at rotateY -t 29 -v 23.575245988682504 $cameraTransform; 
+setKeyframe -at rotateZ -t 29 -v -0.373470091904411 $cameraTransform; 
+setKeyframe -at focalLength -t 29 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 30 -v 292.367624652706809 $cameraTransform; 
+setKeyframe -at translateY -t 30 -v 115.566969039962260 $cameraTransform; 
+setKeyframe -at translateZ -t 30 -v 420.577418852094183 $cameraTransform; 
+setKeyframe -at rotateX -t 30 -v 0.011620112027940 $cameraTransform; 
+setKeyframe -at rotateY -t 30 -v 23.221073715034187 $cameraTransform; 
+setKeyframe -at rotateZ -t 30 -v -0.381714163883599 $cameraTransform; 
+setKeyframe -at focalLength -t 30 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 31 -v 290.791494176428444 $cameraTransform; 
+setKeyframe -at translateY -t 31 -v 115.592662803250789 $cameraTransform; 
+setKeyframe -at translateZ -t 31 -v 421.404719621079664 $cameraTransform; 
+setKeyframe -at rotateX -t 31 -v -0.000106199862193 $cameraTransform; 
+setKeyframe -at rotateY -t 31 -v 22.854321640384423 $cameraTransform; 
+setKeyframe -at rotateZ -t 31 -v -0.393801374138922 $cameraTransform; 
+setKeyframe -at focalLength -t 31 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 32 -v 289.115089909685025 $cameraTransform; 
+setKeyframe -at translateY -t 32 -v 115.693536149139334 $cameraTransform; 
+setKeyframe -at translateZ -t 32 -v 422.277782904071557 $cameraTransform; 
+setKeyframe -at rotateX -t 32 -v -0.036008422155751 $cameraTransform; 
+setKeyframe -at rotateY -t 32 -v 22.409220155540361 $cameraTransform; 
+setKeyframe -at rotateZ -t 32 -v -0.425721228677568 $cameraTransform; 
+setKeyframe -at focalLength -t 32 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 33 -v 287.368893962521099 $cameraTransform; 
+setKeyframe -at translateY -t 33 -v 115.880359632023456 $cameraTransform; 
+setKeyframe -at translateZ -t 33 -v 423.180071128549969 $cameraTransform; 
+setKeyframe -at rotateX -t 33 -v -0.051824483456390 $cameraTransform; 
+setKeyframe -at rotateY -t 33 -v 21.963625691890215 $cameraTransform; 
+setKeyframe -at rotateZ -t 33 -v -0.430719878856183 $cameraTransform; 
+setKeyframe -at focalLength -t 33 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 34 -v 285.593949847088027 $cameraTransform; 
+setKeyframe -at translateY -t 34 -v 116.095350460030843 $cameraTransform; 
+setKeyframe -at translateZ -t 34 -v 424.075927535365054 $cameraTransform; 
+setKeyframe -at rotateX -t 34 -v -0.065767080690872 $cameraTransform; 
+setKeyframe -at rotateY -t 34 -v 21.532452083754681 $cameraTransform; 
+setKeyframe -at rotateZ -t 34 -v -0.423687230304604 $cameraTransform; 
+setKeyframe -at focalLength -t 34 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 35 -v 283.784286787503333 $cameraTransform; 
+setKeyframe -at translateY -t 35 -v 116.257026618442950 $cameraTransform; 
+setKeyframe -at translateZ -t 35 -v 424.963988403033511 $cameraTransform; 
+setKeyframe -at rotateX -t 35 -v -0.077922914871685 $cameraTransform; 
+setKeyframe -at rotateY -t 35 -v 21.110267809700485 $cameraTransform; 
+setKeyframe -at rotateZ -t 35 -v -0.446356828428875 $cameraTransform; 
+setKeyframe -at focalLength -t 35 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 36 -v 281.888425810694343 $cameraTransform; 
+setKeyframe -at translateY -t 36 -v 116.330266537773355 $cameraTransform; 
+setKeyframe -at translateZ -t 36 -v 425.882781801266617 $cameraTransform; 
+setKeyframe -at rotateX -t 36 -v -0.096586230631029 $cameraTransform; 
+setKeyframe -at rotateY -t 36 -v 20.670681927689262 $cameraTransform; 
+setKeyframe -at rotateZ -t 36 -v -0.486483827585142 $cameraTransform; 
+setKeyframe -at focalLength -t 36 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 37 -v 279.881086064798581 $cameraTransform; 
+setKeyframe -at translateY -t 37 -v 116.338087020453230 $cameraTransform; 
+setKeyframe -at translateZ -t 37 -v 426.852981097190536 $cameraTransform; 
+setKeyframe -at rotateX -t 37 -v -0.106269191528105 $cameraTransform; 
+setKeyframe -at rotateY -t 37 -v 20.192723159190191 $cameraTransform; 
+setKeyframe -at rotateZ -t 37 -v -0.505353324087166 $cameraTransform; 
+setKeyframe -at focalLength -t 37 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 38 -v 277.793382292645276 $cameraTransform; 
+setKeyframe -at translateY -t 38 -v 116.319193286028138 $cameraTransform; 
+setKeyframe -at translateZ -t 38 -v 427.851289162539388 $cameraTransform; 
+setKeyframe -at rotateX -t 38 -v -0.105165093613593 $cameraTransform; 
+setKeyframe -at rotateY -t 38 -v 19.725769998297292 $cameraTransform; 
+setKeyframe -at rotateZ -t 38 -v -0.503149653744527 $cameraTransform; 
+setKeyframe -at focalLength -t 38 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 39 -v 275.683693358231324 $cameraTransform; 
+setKeyframe -at translateY -t 39 -v 116.292455710178487 $cameraTransform; 
+setKeyframe -at translateZ -t 39 -v 428.835917785188940 $cameraTransform; 
+setKeyframe -at rotateX -t 39 -v -0.089926158774509 $cameraTransform; 
+setKeyframe -at rotateY -t 39 -v 19.239666619789112 $cameraTransform; 
+setKeyframe -at rotateZ -t 39 -v -0.498811603908006 $cameraTransform; 
+setKeyframe -at focalLength -t 39 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 40 -v 273.612797272695389 $cameraTransform; 
+setKeyframe -at translateY -t 40 -v 116.255042174817305 $cameraTransform; 
+setKeyframe -at translateZ -t 40 -v 429.774074609167542 $cameraTransform; 
+setKeyframe -at rotateX -t 40 -v -0.100914536780356 $cameraTransform; 
+setKeyframe -at rotateY -t 40 -v 18.791430618477005 $cameraTransform; 
+setKeyframe -at rotateZ -t 40 -v -0.552573939475085 $cameraTransform; 
+setKeyframe -at focalLength -t 40 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 41 -v 271.635756005601309 $cameraTransform; 
+setKeyframe -at translateY -t 41 -v 116.201259005049039 $cameraTransform; 
+setKeyframe -at translateZ -t 41 -v 430.651081232447268 $cameraTransform; 
+setKeyframe -at rotateX -t 41 -v -0.096178894719841 $cameraTransform; 
+setKeyframe -at rotateY -t 41 -v 18.309384031144049 $cameraTransform; 
+setKeyframe -at rotateZ -t 41 -v -0.589631556500837 $cameraTransform; 
+setKeyframe -at focalLength -t 41 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 42 -v 269.795922221806393 $cameraTransform; 
+setKeyframe -at translateY -t 42 -v 116.148091503514038 $cameraTransform; 
+setKeyframe -at translateZ -t 42 -v 431.464699839445416 $cameraTransform; 
+setKeyframe -at rotateX -t 42 -v -0.093042030609694 $cameraTransform; 
+setKeyframe -at rotateY -t 42 -v 17.892943428802436 $cameraTransform; 
+setKeyframe -at rotateZ -t 42 -v -0.582367928313443 $cameraTransform; 
+setKeyframe -at focalLength -t 42 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 43 -v 268.098159265394884 $cameraTransform; 
+setKeyframe -at translateY -t 43 -v 116.131943323002076 $cameraTransform; 
+setKeyframe -at translateZ -t 43 -v 432.219628089425157 $cameraTransform; 
+setKeyframe -at rotateX -t 43 -v -0.092689045960445 $cameraTransform; 
+setKeyframe -at rotateY -t 43 -v 17.481853952077557 $cameraTransform; 
+setKeyframe -at rotateZ -t 43 -v -0.568109791120262 $cameraTransform; 
+setKeyframe -at focalLength -t 43 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 44 -v 266.473805191731117 $cameraTransform; 
+setKeyframe -at translateY -t 44 -v 116.159141649338665 $cameraTransform; 
+setKeyframe -at translateZ -t 44 -v 432.934665610208242 $cameraTransform; 
+setKeyframe -at rotateX -t 44 -v -0.097940173322522 $cameraTransform; 
+setKeyframe -at rotateY -t 44 -v 17.117172424831654 $cameraTransform; 
+setKeyframe -at rotateZ -t 44 -v -0.551858423101209 $cameraTransform; 
+setKeyframe -at focalLength -t 44 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 45 -v 264.822501227264354 $cameraTransform; 
+setKeyframe -at translateY -t 45 -v 116.191495379226026 $cameraTransform; 
+setKeyframe -at translateZ -t 45 -v 433.642073005591214 $cameraTransform; 
+setKeyframe -at rotateX -t 45 -v -0.113699817637348 $cameraTransform; 
+setKeyframe -at rotateY -t 45 -v 16.751172079793374 $cameraTransform; 
+setKeyframe -at rotateZ -t 45 -v -0.534584366712276 $cameraTransform; 
+setKeyframe -at focalLength -t 45 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 46 -v 263.094534896047890 $cameraTransform; 
+setKeyframe -at translateY -t 46 -v 116.201487830489882 $cameraTransform; 
+setKeyframe -at translateZ -t 46 -v 434.367201379742312 $cameraTransform; 
+setKeyframe -at rotateX -t 46 -v -0.100625142263891 $cameraTransform; 
+setKeyframe -at rotateY -t 46 -v 16.320329741013069 $cameraTransform; 
+setKeyframe -at rotateZ -t 46 -v -0.549323946283979 $cameraTransform; 
+setKeyframe -at focalLength -t 46 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 47 -v 261.287020475419922 $cameraTransform; 
+setKeyframe -at translateY -t 47 -v 116.194816653899835 $cameraTransform; 
+setKeyframe -at translateZ -t 47 -v 435.116197561589502 $cameraTransform; 
+setKeyframe -at rotateX -t 47 -v -0.074256772184098 $cameraTransform; 
+setKeyframe -at rotateY -t 47 -v 15.898191470447967 $cameraTransform; 
+setKeyframe -at rotateZ -t 47 -v -0.552806215635906 $cameraTransform; 
+setKeyframe -at focalLength -t 47 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 48 -v 259.403336989204377 $cameraTransform; 
+setKeyframe -at translateY -t 48 -v 116.182304449585232 $cameraTransform; 
+setKeyframe -at translateZ -t 48 -v 435.876980695954956 $cameraTransform; 
+setKeyframe -at rotateX -t 48 -v -0.042340390443856 $cameraTransform; 
+setKeyframe -at rotateY -t 48 -v 15.457137029741055 $cameraTransform; 
+setKeyframe -at rotateZ -t 48 -v -0.587575732079879 $cameraTransform; 
+setKeyframe -at focalLength -t 48 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 49 -v 257.451224966865084 $cameraTransform; 
+setKeyframe -at translateY -t 49 -v 116.165332505598030 $cameraTransform; 
+setKeyframe -at translateZ -t 49 -v 436.624220702967989 $cameraTransform; 
+setKeyframe -at rotateX -t 49 -v -0.003029684158411 $cameraTransform; 
+setKeyframe -at rotateY -t 49 -v 15.026020584299026 $cameraTransform; 
+setKeyframe -at rotateZ -t 49 -v -0.580268048908563 $cameraTransform; 
+setKeyframe -at focalLength -t 49 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 50 -v 255.432719149014360 $cameraTransform; 
+setKeyframe -at translateY -t 50 -v 116.141425204438150 $cameraTransform; 
+setKeyframe -at translateZ -t 50 -v 437.340048642920920 $cameraTransform; 
+setKeyframe -at rotateX -t 50 -v -0.015915095064363 $cameraTransform; 
+setKeyframe -at rotateY -t 50 -v 14.574480733893623 $cameraTransform; 
+setKeyframe -at rotateZ -t 50 -v -0.556671067764322 $cameraTransform; 
+setKeyframe -at focalLength -t 50 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 51 -v 253.335986898650589 $cameraTransform; 
+setKeyframe -at translateY -t 51 -v 116.115794438681675 $cameraTransform; 
+setKeyframe -at translateZ -t 51 -v 438.027550390212127 $cameraTransform; 
+setKeyframe -at rotateX -t 51 -v -0.037299618919374 $cameraTransform; 
+setKeyframe -at rotateY -t 51 -v 14.109694146277635 $cameraTransform; 
+setKeyframe -at rotateZ -t 51 -v -0.564523406639417 $cameraTransform; 
+setKeyframe -at focalLength -t 51 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 52 -v 251.166469185097696 $cameraTransform; 
+setKeyframe -at translateY -t 52 -v 116.106982265315253 $cameraTransform; 
+setKeyframe -at translateZ -t 52 -v 438.694146209487656 $cameraTransform; 
+setKeyframe -at rotateX -t 52 -v -0.100191858907241 $cameraTransform; 
+setKeyframe -at rotateY -t 52 -v 13.655105842589666 $cameraTransform; 
+setKeyframe -at rotateZ -t 52 -v -0.565857393643897 $cameraTransform; 
+setKeyframe -at focalLength -t 52 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 53 -v 248.953773515634936 $cameraTransform; 
+setKeyframe -at translateY -t 53 -v 116.129616465960481 $cameraTransform; 
+setKeyframe -at translateZ -t 53 -v 439.341325575511632 $cameraTransform; 
+setKeyframe -at rotateX -t 53 -v -0.153270273962259 $cameraTransform; 
+setKeyframe -at rotateY -t 53 -v 13.167313996621209 $cameraTransform; 
+setKeyframe -at rotateZ -t 53 -v -0.567242329404675 $cameraTransform; 
+setKeyframe -at focalLength -t 53 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 54 -v 246.722734806966173 $cameraTransform; 
+setKeyframe -at translateY -t 54 -v 116.167181207118958 $cameraTransform; 
+setKeyframe -at translateZ -t 54 -v 439.970479331852687 $cameraTransform; 
+setKeyframe -at rotateX -t 54 -v -0.190634700196518 $cameraTransform; 
+setKeyframe -at rotateY -t 54 -v 12.714223552375978 $cameraTransform; 
+setKeyframe -at rotateZ -t 54 -v -0.568755093195963 $cameraTransform; 
+setKeyframe -at focalLength -t 54 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 55 -v 244.495552981749455 $cameraTransform; 
+setKeyframe -at translateY -t 55 -v 116.185058805481845 $cameraTransform; 
+setKeyframe -at translateZ -t 55 -v 440.581577988804838 $cameraTransform; 
+setKeyframe -at rotateX -t 55 -v -0.233627739281887 $cameraTransform; 
+setKeyframe -at rotateY -t 55 -v 12.211912814123162 $cameraTransform; 
+setKeyframe -at rotateZ -t 55 -v -0.568784642340983 $cameraTransform; 
+setKeyframe -at focalLength -t 55 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 56 -v 242.309901046707409 $cameraTransform; 
+setKeyframe -at translateY -t 56 -v 116.172275738333482 $cameraTransform; 
+setKeyframe -at translateZ -t 56 -v 441.170654527879265 $cameraTransform; 
+setKeyframe -at rotateX -t 56 -v -0.283870656922885 $cameraTransform; 
+setKeyframe -at rotateY -t 56 -v 11.759321756354707 $cameraTransform; 
+setKeyframe -at rotateZ -t 56 -v -0.555021415706946 $cameraTransform; 
+setKeyframe -at focalLength -t 56 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 57 -v 240.207586924082761 $cameraTransform; 
+setKeyframe -at translateY -t 57 -v 116.138534203201104 $cameraTransform; 
+setKeyframe -at translateZ -t 57 -v 441.736978754346239 $cameraTransform; 
+setKeyframe -at rotateX -t 57 -v -0.328416592204769 $cameraTransform; 
+setKeyframe -at rotateY -t 57 -v 11.345254341833654 $cameraTransform; 
+setKeyframe -at rotateZ -t 57 -v -0.522526788417425 $cameraTransform; 
+setKeyframe -at focalLength -t 57 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 58 -v 238.216752779251550 $cameraTransform; 
+setKeyframe -at translateY -t 58 -v 116.082669159952403 $cameraTransform; 
+setKeyframe -at translateZ -t 58 -v 442.285349473233907 $cameraTransform; 
+setKeyframe -at rotateX -t 58 -v -0.353662915848527 $cameraTransform; 
+setKeyframe -at rotateY -t 58 -v 10.937224253042128 $cameraTransform; 
+setKeyframe -at rotateZ -t 58 -v -0.492149262211560 $cameraTransform; 
+setKeyframe -at focalLength -t 58 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 59 -v 236.356838260993186 $cameraTransform; 
+setKeyframe -at translateY -t 59 -v 115.996215284580089 $cameraTransform; 
+setKeyframe -at translateZ -t 59 -v 442.812334547072737 $cameraTransform; 
+setKeyframe -at rotateX -t 59 -v -0.347110897158098 $cameraTransform; 
+setKeyframe -at rotateY -t 59 -v 10.532902794040565 $cameraTransform; 
+setKeyframe -at rotateZ -t 59 -v -0.502984586798673 $cameraTransform; 
+setKeyframe -at focalLength -t 59 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 60 -v 234.654542931526294 $cameraTransform; 
+setKeyframe -at translateY -t 60 -v 115.895452026192714 $cameraTransform; 
+setKeyframe -at translateZ -t 60 -v 443.296685730193644 $cameraTransform; 
+setKeyframe -at rotateX -t 60 -v -0.291468114783398 $cameraTransform; 
+setKeyframe -at rotateY -t 60 -v 10.132537888742094 $cameraTransform; 
+setKeyframe -at rotateZ -t 60 -v -0.505255286952104 $cameraTransform; 
+setKeyframe -at focalLength -t 60 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 61 -v 233.130648441866242 $cameraTransform; 
+setKeyframe -at translateY -t 61 -v 115.818750264554453 $cameraTransform; 
+setKeyframe -at translateZ -t 61 -v 443.716719235170785 $cameraTransform; 
+setKeyframe -at rotateX -t 61 -v -0.294212039808408 $cameraTransform; 
+setKeyframe -at rotateY -t 61 -v 9.803997687119999 $cameraTransform; 
+setKeyframe -at rotateZ -t 61 -v -0.494341830883688 $cameraTransform; 
+setKeyframe -at focalLength -t 61 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 62 -v 231.769427576275405 $cameraTransform; 
+setKeyframe -at translateY -t 62 -v 115.782650334996916 $cameraTransform; 
+setKeyframe -at translateZ -t 62 -v 444.072064790105173 $cameraTransform; 
+setKeyframe -at rotateX -t 62 -v -0.297210561730761 $cameraTransform; 
+setKeyframe -at rotateY -t 62 -v 9.572618408821366 $cameraTransform; 
+setKeyframe -at rotateZ -t 62 -v -0.537097578461232 $cameraTransform; 
+setKeyframe -at focalLength -t 62 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 63 -v 230.522516326059986 $cameraTransform; 
+setKeyframe -at translateY -t 63 -v 115.770522227908586 $cameraTransform; 
+setKeyframe -at translateZ -t 63 -v 444.380278830550026 $cameraTransform; 
+setKeyframe -at rotateX -t 63 -v -0.288831987699967 $cameraTransform; 
+setKeyframe -at rotateY -t 63 -v 9.301043347233032 $cameraTransform; 
+setKeyframe -at rotateZ -t 63 -v -0.564316728946251 $cameraTransform; 
+setKeyframe -at focalLength -t 63 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 64 -v 229.326047554939208 $cameraTransform; 
+setKeyframe -at translateY -t 64 -v 115.763838129194028 $cameraTransform; 
+setKeyframe -at translateZ -t 64 -v 444.667183042543570 $cameraTransform; 
+setKeyframe -at rotateX -t 64 -v -0.329557232703936 $cameraTransform; 
+setKeyframe -at rotateY -t 64 -v 9.067312994996982 $cameraTransform; 
+setKeyframe -at rotateZ -t 64 -v -0.558810242089129 $cameraTransform; 
+setKeyframe -at focalLength -t 64 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 65 -v 228.105046221819748 $cameraTransform; 
+setKeyframe -at translateY -t 65 -v 115.757855308999822 $cameraTransform; 
+setKeyframe -at translateZ -t 65 -v 444.962922042986577 $cameraTransform; 
+setKeyframe -at rotateX -t 65 -v -0.350904456081800 $cameraTransform; 
+setKeyframe -at rotateY -t 65 -v 8.822748218185785 $cameraTransform; 
+setKeyframe -at rotateZ -t 65 -v -0.558172276222347 $cameraTransform; 
+setKeyframe -at focalLength -t 65 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 66 -v 226.779214360821555 $cameraTransform; 
+setKeyframe -at translateY -t 66 -v 115.751089851121890 $cameraTransform; 
+setKeyframe -at translateZ -t 66 -v 445.292197933049124 $cameraTransform; 
+setKeyframe -at rotateX -t 66 -v -0.337664243712227 $cameraTransform; 
+setKeyframe -at rotateY -t 66 -v 8.547802466270463 $cameraTransform; 
+setKeyframe -at rotateZ -t 66 -v -0.573619148450814 $cameraTransform; 
+setKeyframe -at focalLength -t 66 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 67 -v 225.275341816185431 $cameraTransform; 
+setKeyframe -at translateY -t 67 -v 115.741791210349092 $cameraTransform; 
+setKeyframe -at translateZ -t 67 -v 445.667427074308591 $cameraTransform; 
+setKeyframe -at rotateX -t 67 -v -0.325047505946640 $cameraTransform; 
+setKeyframe -at rotateY -t 67 -v 8.228009979949146 $cameraTransform; 
+setKeyframe -at rotateZ -t 67 -v -0.578580949001890 $cameraTransform; 
+setKeyframe -at focalLength -t 67 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 68 -v 223.549420657216189 $cameraTransform; 
+setKeyframe -at translateY -t 68 -v 115.733456968596812 $cameraTransform; 
+setKeyframe -at translateZ -t 68 -v 446.091323067820440 $cameraTransform; 
+setKeyframe -at rotateX -t 68 -v -0.318672406312894 $cameraTransform; 
+setKeyframe -at rotateY -t 68 -v 7.879702727618767 $cameraTransform; 
+setKeyframe -at rotateZ -t 68 -v -0.574360561968786 $cameraTransform; 
+setKeyframe -at focalLength -t 68 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 69 -v 221.606163499715734 $cameraTransform; 
+setKeyframe -at translateY -t 69 -v 115.729539145335039 $cameraTransform; 
+setKeyframe -at translateZ -t 69 -v 446.555186137722046 $cameraTransform; 
+setKeyframe -at rotateX -t 69 -v -0.295277177468213 $cameraTransform; 
+setKeyframe -at rotateY -t 69 -v 7.500552016725203 $cameraTransform; 
+setKeyframe -at rotateZ -t 69 -v -0.578639536656197 $cameraTransform; 
+setKeyframe -at focalLength -t 69 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 70 -v 219.492576285675284 $cameraTransform; 
+setKeyframe -at translateY -t 70 -v 115.727767493426100 $cameraTransform; 
+setKeyframe -at translateZ -t 70 -v 447.039496702966574 $cameraTransform; 
+setKeyframe -at rotateX -t 70 -v -0.269529551452385 $cameraTransform; 
+setKeyframe -at rotateY -t 70 -v 7.045563324489459 $cameraTransform; 
+setKeyframe -at rotateZ -t 70 -v -0.576208779722407 $cameraTransform; 
+setKeyframe -at focalLength -t 70 -v 31.260313298571884 $cameraShape;
+setKeyframe -at translateX -t 71 -v 217.283634582645419 $cameraTransform; 
+setKeyframe -at translateY -t 71 -v 115.725628887656654 $cameraTransform; 
+setKeyframe -at translateZ -t 71 -v 447.528208117439419 $cameraTransform; 
+setKeyframe -at rotateX -t 71 -v -0.284947861070685 $cameraTransform; 
+setKeyframe -at rotateY -t 71 -v 6.576108191062382 $cameraTransform; 
+setKeyframe -at rotateZ -t 71 -v -0.565672063551634 $cameraTransform; 
+setKeyframe -at focalLength -t 71 -v 31.260313298571884 $cameraShape;
+
+// create camera point group...
+string $pointGroupName = `group -em -name  "cameraPGroup_cam_1" -parent $sceneGroupName`;
+$pointGroupName = ($sceneGroupName + "|" + $pointGroupName);
+
+
+// create point p02...
+string $locator = stringArrayToString(`spaceLocator -name p02`, "");
+$locator = ("|" + $locator);
+xform -t -171.369292999999999 236.514236000000011 52.323245999999997 $locator;
+parent $locator $pointGroupName;
+
+// create point p03...
+string $locator = stringArrayToString(`spaceLocator -name p03`, "");
+$locator = ("|" + $locator);
+xform -t 55.498745000000000 244.091507000000007 -80.694366000000002 $locator;
+parent $locator $pointGroupName;
+
+// create point p04...
+string $locator = stringArrayToString(`spaceLocator -name p04`, "");
+$locator = ("|" + $locator);
+xform -t -87.253944000000004 239.165161000000012 -24.339217999999999 $locator;
+parent $locator $pointGroupName;
+
+// create point p05...
+string $locator = stringArrayToString(`spaceLocator -name p05`, "");
+$locator = ("|" + $locator);
+xform -t 191.299438000000009 243.392608999999993 -80.463097000000005 $locator;
+parent $locator $pointGroupName;
+
+// create point p06...
+string $locator = stringArrayToString(`spaceLocator -name p06`, "");
+$locator = ("|" + $locator);
+xform -t 129.242871193105884 158.754449025335248 -85.447698419133303 $locator;
+parent $locator $pointGroupName;
+
+// create point p07...
+string $locator = stringArrayToString(`spaceLocator -name p07`, "");
+$locator = ("|" + $locator);
+xform -t -38.897537000000000 105.843215999999998 -49.571376999999998 $locator;
+parent $locator $pointGroupName;
+
+// create point p08...
+string $locator = stringArrayToString(`spaceLocator -name p08`, "");
+$locator = ("|" + $locator);
+xform -t -99.027343999999999 9.957046999999999 -12.239765000000000 $locator;
+parent $locator $pointGroupName;
+
+// create point p09...
+string $locator = stringArrayToString(`spaceLocator -name p09`, "");
+$locator = ("|" + $locator);
+xform -t 60.062846999999998 7.092314000000000 -78.180756000000002 $locator;
+parent $locator $pointGroupName;
+
+// create point p10...
+string $locator = stringArrayToString(`spaceLocator -name p10`, "");
+$locator = ("|" + $locator);
+xform -t 311.220886398718449 29.475861820972113 -36.550338275366812 $locator;
+parent $locator $pointGroupName;
+
+// create point p11...
+string $locator = stringArrayToString(`spaceLocator -name p11`, "");
+$locator = ("|" + $locator);
+xform -t 291.807219999999973 81.184287999999995 -43.827770000000001 $locator;
+parent $locator $pointGroupName;
+
+// create point p12...
+string $locator = stringArrayToString(`spaceLocator -name p12`, "");
+$locator = ("|" + $locator);
+xform -t 307.410767000000021 160.803680000000014 -37.941467000000003 $locator;
+parent $locator $pointGroupName;
+
+// create point p13...
+string $locator = stringArrayToString(`spaceLocator -name p13`, "");
+$locator = ("|" + $locator);
+xform -t -56.497169000000000 164.427826000000010 -41.250377999999998 $locator;
+parent $locator $pointGroupName;
+
+// create point p14...
+string $locator = stringArrayToString(`spaceLocator -name p14`, "");
+$locator = ("|" + $locator);
+xform -t -162.175796999999989 6.456600000000000 44.939143999999999 $locator;
+parent $locator $pointGroupName;
+
+// create point p15...
+string $locator = stringArrayToString(`spaceLocator -name p15`, "");
+$locator = ("|" + $locator);
+xform -t -164.508194000000003 138.216109999999986 45.720730000000003 $locator;
+parent $locator $pointGroupName;
+
+// create point p16...
+string $locator = stringArrayToString(`spaceLocator -name p16`, "");
+$locator = ("|" + $locator);
+xform -t -54.646014999999998 -0.462791000000000 103.874190999999996 $locator;
+parent $locator $pointGroupName;
+
+// create point p17...
+string $locator = stringArrayToString(`spaceLocator -name p17`, "");
+$locator = ("|" + $locator);
+xform -t 46.942253000000001 -0.072781000000000 51.470219000000000 $locator;
+parent $locator $pointGroupName;
+
+// create point p18...
+string $locator = stringArrayToString(`spaceLocator -name p18`, "");
+$locator = ("|" + $locator);
+xform -t 0.000000000000000 0.000000000000000 0.000000000000000 $locator;
+parent $locator $pointGroupName;
+
+// create point p19...
+string $locator = stringArrayToString(`spaceLocator -name p19`, "");
+$locator = ("|" + $locator);
+xform -t -117.716804999999994 80.217376999999999 -0.483927000000000 $locator;
+parent $locator $pointGroupName;
+
+// create point p20...
+string $locator = stringArrayToString(`spaceLocator -name p20`, "");
+$locator = ("|" + $locator);
+xform -t 103.915773758358242 0.074102152779273 -59.563742260032818 $locator;
+parent $locator $pointGroupName;
+
+// create point p21...
+string $locator = stringArrayToString(`spaceLocator -name p21`, "");
+$locator = ("|" + $locator);
+xform -t 20.401982752741333 26.212221700146529 -72.657654744101819 $locator;
+parent $locator $pointGroupName;
+
+// create point p22...
+string $locator = stringArrayToString(`spaceLocator -name p22`, "");
+$locator = ("|" + $locator);
+xform -t 104.453608473966597 51.425065894772160 -62.531760172882059 $locator;
+parent $locator $pointGroupName;
+
+// create point p23...
+string $locator = stringArrayToString(`spaceLocator -name p23`, "");
+$locator = ("|" + $locator);
+xform -t -119.022307999999995 165.956054999999992 -0.880173000000000 $locator;
+parent $locator $pointGroupName;
+
+// create point p24...
+string $locator = stringArrayToString(`spaceLocator -name p24`, "");
+$locator = ("|" + $locator);
+xform -t 338.593672835433892 238.836330499753188 -28.569540090590696 $locator;
+parent $locator $pointGroupName;
+
+// create point p25...
+string $locator = stringArrayToString(`spaceLocator -name p25`, "");
+$locator = ("|" + $locator);
+xform -t 264.690886999999975 244.789307000000008 -57.674553000000003 $locator;
+parent $locator $pointGroupName;
+
+// create point p26...
+string $locator = stringArrayToString(`spaceLocator -name p26`, "");
+$locator = ("|" + $locator);
+xform -t 14.797370000000001 163.985611000000006 -69.843590000000006 $locator;
+parent $locator $pointGroupName;
+
+// create point p27...
+string $locator = stringArrayToString(`spaceLocator -name p27`, "");
+$locator = ("|" + $locator);
+xform -t -119.945755000000005 -0.564355000000000 40.841621000000004 $locator;
+parent $locator $pointGroupName;
+
+// create point p28...
+string $locator = stringArrayToString(`spaceLocator -name p28`, "");
+$locator = ("|" + $locator);
+xform -t 83.642543818134754 0.101397015455518 -21.767189157500070 $locator;
+parent $locator $pointGroupName;
+
+// create point p29...
+string $locator = stringArrayToString(`spaceLocator -name p29`, "");
+$locator = ("|" + $locator);
+xform -t 155.150957111676746 0.878465439685267 -52.179508306454167 $locator;
+parent $locator $pointGroupName;
+
+// create point p30...
+string $locator = stringArrayToString(`spaceLocator -name p30`, "");
+$locator = ("|" + $locator);
+xform -t 285.828734999999995 -0.462791000000000 46.668976000000001 $locator;
+parent $locator $pointGroupName;
+
+// create point p31...
+string $locator = stringArrayToString(`spaceLocator -name p31`, "");
+$locator = ("|" + $locator);
+xform -t -23.851374000000000 241.028304999999989 -56.978352000000001 $locator;
+parent $locator $pointGroupName;
+
+// create point p32...
+string $locator = stringArrayToString(`spaceLocator -name p32`, "");
+$locator = ("|" + $locator);
+xform -t 25.750874000000000 80.889533999999998 -71.770554000000004 $locator;
+parent $locator $pointGroupName;
+
+// create point p33...
+string $locator = stringArrayToString(`spaceLocator -name p33`, "");
+$locator = ("|" + $locator);
+xform -t 130.015166999999991 62.559981999999998 -82.447563000000002 $locator;
+parent $locator $pointGroupName;
+
+xform -zeroTransformPivots -rotateOrder zxy -scale 1.000000 1.000000 1.000000 $pointGroupName;
+
+python ("import maya.OpenMaya as om\n" + 
+		"pa = om.MPointArray()\n" + 
+		"pa.append(     104.566780,       1.323213,     -56.426521)\n" + 
+		"pa.append(     105.090942,     335.900116,     -65.574821)\n" + 
+		"pa.append(     154.265549,       1.635471,     -55.055508)\n" + 
+		"pa.append(     153.296326,     335.686920,     -64.725220)\n" + 
+		"pa.append(     105.464661,     214.687180,     -62.843918)\n" + 
+		"pa.append(     153.072891,     214.399918,     -61.582806)\n" + 
+		"pa.append(     105.408768,     194.702515,     -62.260502)\n" + 
+		"pa.append(     152.959915,     194.286682,     -60.971249)\n" + 
+		"pa.append(     105.112953,     174.394623,     -61.726212)\n" + 
+		"pa.append(     153.243713,     174.178391,     -60.529915)\n" + 
+		"pa.append(     105.033554,     133.873779,     -61.045708)\n" + 
+		"pa.append(     153.109360,     133.655823,     -59.562309)\n" + 
+		"pa.append(     105.163597,     114.094742,     -60.681084)\n" + 
+		"pa.append(     153.180237,     113.840401,     -58.915157)\n" + 
+		"pa.append(     105.249901,      93.670685,     -60.245594)\n" + 
+		"pa.append(     153.081909,      93.160149,     -58.693684)\n" + 
+		"pa.append(     105.100258,      53.072758,     -59.626572)\n" + 
+		"pa.append(     153.444000,      52.976868,     -57.658031)\n" + 
+		"pa.append(    -162.175797,       6.456600,      44.939144)\n" + 
+		"pa.append(    -166.175797,      26.456600,      44.939144)\n" + 
+		"pa.append(    -162.175797,      22.456600,      42.082001)\n" + 
+		"pa.append(    -158.175797,      26.456600,      42.939144)\n" + 
+		"pa.append(    -162.175797,       6.456600,      44.939144)\n" + 
+		"pa.append(     -99.027344,       9.957047,     -12.239765)\n" + 
+		"pa.append(    -103.027344,      29.957047,     -12.239765)\n" + 
+		"pa.append(     -99.027344,      25.957047,     -15.096909)\n" + 
+		"pa.append(     -95.027344,      29.957047,     -14.239765)\n" + 
+		"pa.append(     -99.027344,       9.957047,     -12.239765)\n" + 
+		"pa.append(     -17.848778,       8.892981,     -55.906487)\n" + 
+		"pa.append(     -21.848778,      28.892981,     -55.906487)\n" + 
+		"pa.append(     -17.848778,      24.892981,     -58.763630)\n" + 
+		"pa.append(     -13.848778,      28.892981,     -57.906487)\n" + 
+		"pa.append(     -17.848778,       8.892981,     -55.906487)\n" + 
+		"pa.append(      60.062847,       7.092314,     -78.180756)\n" + 
+		"pa.append(      56.062847,      27.092314,     -78.180756)\n" + 
+		"pa.append(      60.062847,      23.092314,     -81.037895)\n" + 
+		"pa.append(      64.062851,      27.092314,     -80.180756)\n" + 
+		"pa.append(      60.062847,       7.092314,     -78.180756)\n" + 
+		"pa.append(     271.850311,      13.631355,     -51.978050)\n" + 
+		"pa.append(     267.850311,      33.631355,     -51.978050)\n" + 
+		"pa.append(     271.850311,      29.631355,     -54.835194)\n" + 
+		"pa.append(     275.850311,      33.631355,     -53.978050)\n" + 
+		"pa.append(     271.850311,      13.631355,     -51.978050)\n" + 
+		"pa.append(     381.086945,      12.023923,      18.463499)\n" + 
+		"pa.append(     377.086945,      32.023922,      18.463499)\n" + 
+		"pa.append(     381.086945,      28.023924,      15.606356)\n" + 
+		"pa.append(     385.086945,      32.023922,      16.463499)\n" + 
+		"pa.append(     381.086945,      12.023923,      18.463499)\n" + 
+		"pa.append(     437.506500,      10.571466,      85.303032)\n" + 
+		"pa.append(     433.506500,      30.571466,      85.303032)\n" + 
+		"pa.append(     437.506500,      26.571466,      82.445885)\n" + 
+		"pa.append(     441.506500,      30.571466,      83.303032)\n" + 
+		"pa.append(     437.506500,      10.571466,      85.303032)\n" + 
+		"pa.append(    -117.716805,      80.217377,      -0.483927)\n" + 
+		"pa.append(    -121.716805,     100.217377,      -0.483927)\n" + 
+		"pa.append(    -117.716805,      96.217377,      -3.341070)\n" + 
+		"pa.append(    -113.716805,     100.217377,      -2.483927)\n" + 
+		"pa.append(    -117.716805,      80.217377,      -0.483927)\n" + 
+		"pa.append(     -38.897537,     105.843216,     -49.571377)\n" + 
+		"pa.append(     -42.897537,     125.843216,     -49.571377)\n" + 
+		"pa.append(     -38.897537,     121.843216,     -52.428520)\n" + 
+		"pa.append(     -34.897537,     125.843216,     -51.571377)\n" + 
+		"pa.append(     -38.897537,     105.843216,     -49.571377)\n" + 
+		"pa.append(      25.750874,      80.889534,     -71.770554)\n" + 
+		"pa.append(      21.750874,     100.889534,     -71.770554)\n" + 
+		"pa.append(      25.750874,      96.889534,     -74.627701)\n" + 
+		"pa.append(      29.750874,     100.889534,     -73.770554)\n" + 
+		"pa.append(      25.750874,      80.889534,     -71.770554)\n" + 
+		"pa.append(     130.015167,      62.559982,     -82.447563)\n" + 
+		"pa.append(     126.015160,      82.559982,     -82.447563)\n" + 
+		"pa.append(     130.015167,      78.559982,     -85.304710)\n" + 
+		"pa.append(     134.015167,      82.559982,     -84.447563)\n" + 
+		"pa.append(     130.015167,      62.559982,     -82.447563)\n" + 
+		"pa.append(     201.126297,      80.766251,     -75.818916)\n" + 
+		"pa.append(     197.126297,     100.766251,     -75.818916)\n" + 
+		"pa.append(     201.126297,      96.766251,     -78.676064)\n" + 
+		"pa.append(     205.126297,     100.766251,     -77.818916)\n" + 
+		"pa.append(     201.126297,      80.766251,     -75.818916)\n" + 
+		"pa.append(     291.807220,      81.184288,     -43.827770)\n" + 
+		"pa.append(     287.807220,     101.184288,     -43.827770)\n" + 
+		"pa.append(     291.807220,      97.184288,     -46.684914)\n" + 
+		"pa.append(     295.807220,     101.184288,     -45.827770)\n" + 
+		"pa.append(     291.807220,      81.184288,     -43.827770)\n" + 
+		"pa.append(     378.234467,      85.520538,      13.191912)\n" + 
+		"pa.append(     374.234467,     105.520538,      13.191912)\n" + 
+		"pa.append(     378.234467,     101.520538,      10.334768)\n" + 
+		"pa.append(     382.234467,     105.520538,      11.191912)\n" + 
+		"pa.append(     378.234467,      85.520538,      13.191912)\n" + 
+		"pa.append(     386.234833,      81.001274,      21.021675)\n" + 
+		"pa.append(     382.234833,     101.001274,      21.021675)\n" + 
+		"pa.append(     386.234833,      97.001274,      18.164532)\n" + 
+		"pa.append(     390.234833,     101.001274,      19.021675)\n" + 
+		"pa.append(     386.234833,      81.001274,      21.021675)\n" + 
+		"pa.append(     439.292786,      90.360542,      86.436546)\n" + 
+		"pa.append(     435.292786,     110.360542,      86.436546)\n" + 
+		"pa.append(     439.292786,     106.360542,      83.579407)\n" + 
+		"pa.append(     443.292786,     110.360542,      84.436546)\n" + 
+		"pa.append(     439.292786,      90.360542,      86.436546)\n" + 
+		"pa.append(    -164.508194,     138.216110,      45.720730)\n" + 
+		"pa.append(    -168.508194,     158.216110,      45.720730)\n" + 
+		"pa.append(    -164.508194,     154.216110,      42.863590)\n" + 
+		"pa.append(    -160.508194,     158.216110,      43.720730)\n" + 
+		"pa.append(    -164.508194,     138.216110,      45.720730)\n" + 
+		"pa.append(    -119.022308,     165.956055,      -0.880173)\n" + 
+		"pa.append(    -123.022308,     185.956055,      -0.880173)\n" + 
+		"pa.append(    -119.022308,     181.956055,      -3.737316)\n" + 
+		"pa.append(    -115.022308,     185.956055,      -2.880173)\n" + 
+		"pa.append(    -119.022308,     165.956055,      -0.880173)\n" + 
+		"pa.append(     -56.497169,     164.427826,     -41.250378)\n" + 
+		"pa.append(     -60.497169,     184.427826,     -41.250378)\n" + 
+		"pa.append(     -56.497169,     180.427826,     -44.107521)\n" + 
+		"pa.append(     -52.497169,     184.427826,     -43.250378)\n" + 
+		"pa.append(     -56.497169,     164.427826,     -41.250378)\n" + 
+		"pa.append(       9.435599,     158.217773,     -68.205063)\n" + 
+		"pa.append(       5.435599,     178.217773,     -68.205063)\n" + 
+		"pa.append(       9.435599,     174.217773,     -71.062202)\n" + 
+		"pa.append(      13.435599,     178.217773,     -70.205063)\n" + 
+		"pa.append(       9.435599,     158.217773,     -68.205063)\n" + 
+		"pa.append(      14.797370,     163.985611,     -69.843590)\n" + 
+		"pa.append(      10.797370,     183.985611,     -69.843590)\n" + 
+		"pa.append(      14.797370,     179.985611,     -72.700729)\n" + 
+		"pa.append(      18.797371,     183.985611,     -71.843590)\n" + 
+		"pa.append(      14.797370,     163.985611,     -69.843590)\n" + 
+		"pa.append(     128.836365,     158.647156,     -85.332413)\n" + 
+		"pa.append(     124.836357,     178.647156,     -85.332413)\n" + 
+		"pa.append(     128.836365,     174.647156,     -88.189560)\n" + 
+		"pa.append(     132.836365,     178.647156,     -87.332413)\n" + 
+		"pa.append(     128.836365,     158.647156,     -85.332413)\n" + 
+		"pa.append(     230.687302,     156.376556,     -70.030304)\n" + 
+		"pa.append(     226.687302,     176.376556,     -70.030304)\n" + 
+		"pa.append(     230.687302,     172.376556,     -72.887444)\n" + 
+		"pa.append(     234.687302,     176.376556,     -72.030304)\n" + 
+		"pa.append(     230.687302,     156.376556,     -70.030304)\n" + 
+		"pa.append(     307.410767,     160.803680,     -37.941467)\n" + 
+		"pa.append(     303.410767,     180.803680,     -37.941467)\n" + 
+		"pa.append(     307.410767,     176.803680,     -40.798611)\n" + 
+		"pa.append(     311.410767,     180.803680,     -39.941467)\n" + 
+		"pa.append(     307.410767,     160.803680,     -37.941467)\n" + 
+		"pa.append(     378.476440,     165.285492,      12.316239)\n" + 
+		"pa.append(     374.476440,     185.285492,      12.316239)\n" + 
+		"pa.append(     378.476440,     181.285492,       9.459097)\n" + 
+		"pa.append(     382.476440,     185.285492,      10.316239)\n" + 
+		"pa.append(     378.476440,     165.285492,      12.316239)\n" + 
+		"pa.append(     441.921631,     159.247375,      87.643608)\n" + 
+		"pa.append(     437.921631,     179.247375,      87.643608)\n" + 
+		"pa.append(     441.921631,     175.247375,      84.786469)\n" + 
+		"pa.append(     445.921631,     179.247375,      85.643608)\n" + 
+		"pa.append(     441.921631,     159.247375,      87.643608)\n" + 
+		"pa.append(    -171.369293,     236.514236,      52.323246)\n" + 
+		"pa.append(    -175.369293,     256.514252,      52.323246)\n" + 
+		"pa.append(    -171.369293,     252.514236,      49.466103)\n" + 
+		"pa.append(    -167.369293,     256.514252,      50.323246)\n" + 
+		"pa.append(    -171.369293,     236.514236,      52.323246)\n" + 
+		"pa.append(    -131.533524,     235.610306,      11.109652)\n" + 
+		"pa.append(    -135.533524,     255.610306,      11.109652)\n" + 
+		"pa.append(    -131.533524,     251.610306,       8.252509)\n" + 
+		"pa.append(    -127.533531,     255.610306,       9.109652)\n" + 
+		"pa.append(    -131.533524,     235.610306,      11.109652)\n" + 
+		"pa.append(     -87.253944,     239.165161,     -24.339218)\n" + 
+		"pa.append(     -91.253944,     259.165161,     -24.339218)\n" + 
+		"pa.append(     -87.253944,     255.165161,     -27.196362)\n" + 
+		"pa.append(     -83.253944,     259.165161,     -26.339218)\n" + 
+		"pa.append(     -87.253944,     239.165161,     -24.339218)\n" + 
+		"pa.append(     -23.851374,     241.028305,     -56.978352)\n" + 
+		"pa.append(     -27.851374,     261.028290,     -56.978352)\n" + 
+		"pa.append(     -23.851374,     257.028290,     -59.835495)\n" + 
+		"pa.append(     -19.851374,     261.028290,     -58.978352)\n" + 
+		"pa.append(     -23.851374,     241.028305,     -56.978352)\n" + 
+		"pa.append(      55.498745,     244.091507,     -80.694366)\n" + 
+		"pa.append(      51.498745,     264.091522,     -80.694366)\n" + 
+		"pa.append(      55.498745,     260.091522,     -83.551506)\n" + 
+		"pa.append(      59.498745,     264.091522,     -82.694366)\n" + 
+		"pa.append(      55.498745,     244.091507,     -80.694366)\n" + 
+		"pa.append(     191.299438,     243.392609,     -80.463097)\n" + 
+		"pa.append(     187.299438,     263.392609,     -80.463097)\n" + 
+		"pa.append(     191.299438,     259.392609,     -83.320236)\n" + 
+		"pa.append(     195.299438,     263.392609,     -82.463097)\n" + 
+		"pa.append(     191.299438,     243.392609,     -80.463097)\n" + 
+		"pa.append(     264.690887,     244.789307,     -57.674553)\n" + 
+		"pa.append(     260.690887,     264.789307,     -57.674553)\n" + 
+		"pa.append(     264.690887,     260.789307,     -60.531696)\n" + 
+		"pa.append(     268.690887,     264.789307,     -59.674553)\n" + 
+		"pa.append(     264.690887,     244.789307,     -57.674553)\n" + 
+		"pa.append(     335.979553,     236.548569,     -20.359753)\n" + 
+		"pa.append(     331.979553,     256.548553,     -20.359753)\n" + 
+		"pa.append(     335.979553,     252.548569,     -23.216896)\n" + 
+		"pa.append(     339.979553,     256.548553,     -22.359753)\n" + 
+		"pa.append(     335.979553,     236.548569,     -20.359753)\n" + 
+		"pa.append(     340.694489,     242.587631,     -17.260925)\n" + 
+		"pa.append(     336.694489,     262.587616,     -17.260925)\n" + 
+		"pa.append(     340.694489,     258.587616,     -20.118069)\n" + 
+		"pa.append(     344.694489,     262.587616,     -19.260925)\n" + 
+		"pa.append(     340.694489,     242.587631,     -17.260925)\n" + 
+		"pa.append(     383.638000,     246.873459,      16.070042)\n" + 
+		"pa.append(     379.638000,     266.873444,      16.070042)\n" + 
+		"pa.append(     383.638000,     262.873444,      13.212898)\n" + 
+		"pa.append(     387.638000,     266.873444,      14.070041)\n" + 
+		"pa.append(     383.638000,     246.873459,      16.070042)\n" + 
+		"pa.append(     443.136230,     244.675140,      90.256577)\n" + 
+		"pa.append(     439.136230,     264.675140,      90.256577)\n" + 
+		"pa.append(     443.136230,     260.675140,      87.399437)\n" + 
+		"pa.append(     447.136230,     264.675140,      88.256577)\n" + 
+		"pa.append(     443.136230,     244.675140,      90.256577)\n" + 
+		"pa.append(    -119.945755,      -0.564355,      40.841621)\n" + 
+		"pa.append(    -123.945755,      19.435646,      40.841621)\n" + 
+		"pa.append(    -119.945755,      15.435645,      37.984478)\n" + 
+		"pa.append(    -115.945755,      19.435646,      38.841621)\n" + 
+		"pa.append(    -119.945755,      -0.564355,      40.841621)\n" + 
+		"pa.append(       0.000000,       0.000000,       0.000000)\n" + 
+		"pa.append(      -4.000000,      20.000000,       0.000000)\n" + 
+		"pa.append(       0.000000,      16.000000,      -2.857143)\n" + 
+		"pa.append(       4.000000,      20.000000,      -2.000000)\n" + 
+		"pa.append(       0.000000,       0.000000,       0.000000)\n" + 
+		"pa.append(     235.780243,      -0.240240,     -27.363920)\n" + 
+		"pa.append(     231.780243,      19.759760,     -27.363920)\n" + 
+		"pa.append(     235.780243,      15.759760,     -30.221062)\n" + 
+		"pa.append(     239.780243,      19.759760,     -29.363920)\n" + 
+		"pa.append(     235.780243,      -0.240240,     -27.363920)\n" + 
+		"pa.append(     377.157776,      -0.757558,      84.597176)\n" + 
+		"pa.append(     373.157776,      19.242441,      84.597176)\n" + 
+		"pa.append(     377.157776,      15.242441,      81.740036)\n" + 
+		"pa.append(     381.157776,      19.242441,      82.597176)\n" + 
+		"pa.append(     377.157776,      -0.757558,      84.597176)\n" + 
+		"pa.append(     -54.646015,      -0.462791,     103.874191)\n" + 
+		"pa.append(     -58.646015,      19.537209,     103.874191)\n" + 
+		"pa.append(     -54.646015,      15.537210,     101.017052)\n" + 
+		"pa.append(     -50.646015,      19.537209,     101.874191)\n" + 
+		"pa.append(     -54.646015,      -0.462791,     103.874191)\n" + 
+		"pa.append(      46.942253,      -0.072781,      51.470219)\n" + 
+		"pa.append(      42.942253,      19.927219,      51.470219)\n" + 
+		"pa.append(      46.942253,      15.927219,      48.613075)\n" + 
+		"pa.append(      50.942253,      19.927219,      49.470219)\n" + 
+		"pa.append(      46.942253,      -0.072781,      51.470219)\n" + 
+		"pa.append(     285.828735,      -0.462791,      46.668976)\n" + 
+		"pa.append(     281.828735,      19.537209,      46.668976)\n" + 
+		"pa.append(     285.828735,      15.537210,      43.811832)\n" + 
+		"pa.append(     289.828735,      19.537209,      44.668976)\n" + 
+		"pa.append(     285.828735,      -0.462791,      46.668976)\n" + 
+		"poly_count = om.MIntArray()\n" + 
+		"poly_count.append(3)\n" + 
+		"poly_count.append(3)\n" + 
+		"poly_count.append(3)\n" + 
+		"poly_count.append(3)\n" + 
+		"poly_count.append(3)\n" + 
+		"poly_count.append(3)\n" + 
+		"poly_count.append(3)\n" + 
+		"poly_count.append(3)\n" + 
+		"poly_count.append(3)\n" + 
+		"poly_count.append(5)\n" + 
+		"poly_count.append(5)\n" + 
+		"poly_count.append(5)\n" + 
+		"poly_count.append(5)\n" + 
+		"poly_count.append(5)\n" + 
+		"poly_count.append(5)\n" + 
+		"poly_count.append(5)\n" + 
+		"poly_count.append(5)\n" + 
+		"poly_count.append(5)\n" + 
+		"poly_count.append(5)\n" + 
+		"poly_count.append(5)\n" + 
+		"poly_count.append(5)\n" + 
+		"poly_count.append(5)\n" + 
+		"poly_count.append(5)\n" + 
+		"poly_count.append(5)\n" + 
+		"poly_count.append(5)\n" + 
+		"poly_count.append(5)\n" + 
+		"poly_count.append(5)\n" + 
+		"poly_count.append(5)\n" + 
+		"poly_count.append(5)\n" + 
+		"poly_count.append(5)\n" + 
+		"poly_count.append(5)\n" + 
+		"poly_count.append(5)\n" + 
+		"poly_count.append(5)\n" + 
+		"poly_count.append(5)\n" + 
+		"poly_count.append(5)\n" + 
+		"poly_count.append(5)\n" + 
+		"poly_count.append(5)\n" + 
+		"poly_count.append(5)\n" + 
+		"poly_count.append(5)\n" + 
+		"poly_count.append(5)\n" + 
+		"poly_count.append(5)\n" + 
+		"poly_count.append(5)\n" + 
+		"poly_count.append(5)\n" + 
+		"poly_count.append(5)\n" + 
+		"poly_count.append(5)\n" + 
+		"poly_count.append(5)\n" + 
+		"poly_count.append(5)\n" + 
+		"poly_count.append(5)\n" + 
+		"poly_count.append(5)\n" + 
+		"poly_count.append(5)\n" + 
+		"poly_count.append(5)\n" + 
+		"poly_count.append(5)\n" + 
+		"poly_count.append(5)\n" + 
+		"poly_conn = om.MIntArray()\n" + 
+		"poly_conn.append(0)\n" + 
+		"poly_conn.append(1)\n" + 
+		"poly_conn.append(1)\n" + 
+		"poly_conn.append(2)\n" + 
+		"poly_conn.append(3)\n" + 
+		"poly_conn.append(3)\n" + 
+		"poly_conn.append(4)\n" + 
+		"poly_conn.append(5)\n" + 
+		"poly_conn.append(5)\n" + 
+		"poly_conn.append(6)\n" + 
+		"poly_conn.append(7)\n" + 
+		"poly_conn.append(7)\n" + 
+		"poly_conn.append(8)\n" + 
+		"poly_conn.append(9)\n" + 
+		"poly_conn.append(9)\n" + 
+		"poly_conn.append(10)\n" + 
+		"poly_conn.append(11)\n" + 
+		"poly_conn.append(11)\n" + 
+		"poly_conn.append(12)\n" + 
+		"poly_conn.append(13)\n" + 
+		"poly_conn.append(13)\n" + 
+		"poly_conn.append(14)\n" + 
+		"poly_conn.append(15)\n" + 
+		"poly_conn.append(15)\n" + 
+		"poly_conn.append(16)\n" + 
+		"poly_conn.append(17)\n" + 
+		"poly_conn.append(17)\n" + 
+		"poly_conn.append(18)\n" + 
+		"poly_conn.append(19)\n" + 
+		"poly_conn.append(20)\n" + 
+		"poly_conn.append(21)\n" + 
+		"poly_conn.append(22)\n" + 
+		"poly_conn.append(23)\n" + 
+		"poly_conn.append(24)\n" + 
+		"poly_conn.append(25)\n" + 
+		"poly_conn.append(26)\n" + 
+		"poly_conn.append(27)\n" + 
+		"poly_conn.append(28)\n" + 
+		"poly_conn.append(29)\n" + 
+		"poly_conn.append(30)\n" + 
+		"poly_conn.append(31)\n" + 
+		"poly_conn.append(32)\n" + 
+		"poly_conn.append(33)\n" + 
+		"poly_conn.append(34)\n" + 
+		"poly_conn.append(35)\n" + 
+		"poly_conn.append(36)\n" + 
+		"poly_conn.append(37)\n" + 
+		"poly_conn.append(38)\n" + 
+		"poly_conn.append(39)\n" + 
+		"poly_conn.append(40)\n" + 
+		"poly_conn.append(41)\n" + 
+		"poly_conn.append(42)\n" + 
+		"poly_conn.append(43)\n" + 
+		"poly_conn.append(44)\n" + 
+		"poly_conn.append(45)\n" + 
+		"poly_conn.append(46)\n" + 
+		"poly_conn.append(47)\n" + 
+		"poly_conn.append(48)\n" + 
+		"poly_conn.append(49)\n" + 
+		"poly_conn.append(50)\n" + 
+		"poly_conn.append(51)\n" + 
+		"poly_conn.append(52)\n" + 
+		"poly_conn.append(53)\n" + 
+		"poly_conn.append(54)\n" + 
+		"poly_conn.append(55)\n" + 
+		"poly_conn.append(56)\n" + 
+		"poly_conn.append(57)\n" + 
+		"poly_conn.append(58)\n" + 
+		"poly_conn.append(59)\n" + 
+		"poly_conn.append(60)\n" + 
+		"poly_conn.append(61)\n" + 
+		"poly_conn.append(62)\n" + 
+		"poly_conn.append(63)\n" + 
+		"poly_conn.append(64)\n" + 
+		"poly_conn.append(65)\n" + 
+		"poly_conn.append(66)\n" + 
+		"poly_conn.append(67)\n" + 
+		"poly_conn.append(68)\n" + 
+		"poly_conn.append(69)\n" + 
+		"poly_conn.append(70)\n" + 
+		"poly_conn.append(71)\n" + 
+		"poly_conn.append(72)\n" + 
+		"poly_conn.append(73)\n" + 
+		"poly_conn.append(74)\n" + 
+		"poly_conn.append(75)\n" + 
+		"poly_conn.append(76)\n" + 
+		"poly_conn.append(77)\n" + 
+		"poly_conn.append(78)\n" + 
+		"poly_conn.append(79)\n" + 
+		"poly_conn.append(80)\n" + 
+		"poly_conn.append(81)\n" + 
+		"poly_conn.append(82)\n" + 
+		"poly_conn.append(83)\n" + 
+		"poly_conn.append(84)\n" + 
+		"poly_conn.append(85)\n" + 
+		"poly_conn.append(86)\n" + 
+		"poly_conn.append(87)\n" + 
+		"poly_conn.append(88)\n" + 
+		"poly_conn.append(89)\n" + 
+		"poly_conn.append(90)\n" + 
+		"poly_conn.append(91)\n" + 
+		"poly_conn.append(92)\n" + 
+		"poly_conn.append(93)\n" + 
+		"poly_conn.append(94)\n" + 
+		"poly_conn.append(95)\n" + 
+		"poly_conn.append(96)\n" + 
+		"poly_conn.append(97)\n" + 
+		"poly_conn.append(98)\n" + 
+		"poly_conn.append(99)\n" + 
+		"poly_conn.append(100)\n" + 
+		"poly_conn.append(101)\n" + 
+		"poly_conn.append(102)\n" + 
+		"poly_conn.append(103)\n" + 
+		"poly_conn.append(104)\n" + 
+		"poly_conn.append(105)\n" + 
+		"poly_conn.append(106)\n" + 
+		"poly_conn.append(107)\n" + 
+		"poly_conn.append(108)\n" + 
+		"poly_conn.append(109)\n" + 
+		"poly_conn.append(110)\n" + 
+		"poly_conn.append(111)\n" + 
+		"poly_conn.append(112)\n" + 
+		"poly_conn.append(113)\n" + 
+		"poly_conn.append(114)\n" + 
+		"poly_conn.append(115)\n" + 
+		"poly_conn.append(116)\n" + 
+		"poly_conn.append(117)\n" + 
+		"poly_conn.append(118)\n" + 
+		"poly_conn.append(119)\n" + 
+		"poly_conn.append(120)\n" + 
+		"poly_conn.append(121)\n" + 
+		"poly_conn.append(122)\n" + 
+		"poly_conn.append(123)\n" + 
+		"poly_conn.append(124)\n" + 
+		"poly_conn.append(125)\n" + 
+		"poly_conn.append(126)\n" + 
+		"poly_conn.append(127)\n" + 
+		"poly_conn.append(128)\n" + 
+		"poly_conn.append(129)\n" + 
+		"poly_conn.append(130)\n" + 
+		"poly_conn.append(131)\n" + 
+		"poly_conn.append(132)\n" + 
+		"poly_conn.append(133)\n" + 
+		"poly_conn.append(134)\n" + 
+		"poly_conn.append(135)\n" + 
+		"poly_conn.append(136)\n" + 
+		"poly_conn.append(137)\n" + 
+		"poly_conn.append(138)\n" + 
+		"poly_conn.append(139)\n" + 
+		"poly_conn.append(140)\n" + 
+		"poly_conn.append(141)\n" + 
+		"poly_conn.append(142)\n" + 
+		"poly_conn.append(143)\n" + 
+		"poly_conn.append(144)\n" + 
+		"poly_conn.append(145)\n" + 
+		"poly_conn.append(146)\n" + 
+		"poly_conn.append(147)\n" + 
+		"poly_conn.append(148)\n" + 
+		"poly_conn.append(149)\n" + 
+		"poly_conn.append(150)\n" + 
+		"poly_conn.append(151)\n" + 
+		"poly_conn.append(152)\n" + 
+		"poly_conn.append(153)\n" + 
+		"poly_conn.append(154)\n" + 
+		"poly_conn.append(155)\n" + 
+		"poly_conn.append(156)\n" + 
+		"poly_conn.append(157)\n" + 
+		"poly_conn.append(158)\n" + 
+		"poly_conn.append(159)\n" + 
+		"poly_conn.append(160)\n" + 
+		"poly_conn.append(161)\n" + 
+		"poly_conn.append(162)\n" + 
+		"poly_conn.append(163)\n" + 
+		"poly_conn.append(164)\n" + 
+		"poly_conn.append(165)\n" + 
+		"poly_conn.append(166)\n" + 
+		"poly_conn.append(167)\n" + 
+		"poly_conn.append(168)\n" + 
+		"poly_conn.append(169)\n" + 
+		"poly_conn.append(170)\n" + 
+		"poly_conn.append(171)\n" + 
+		"poly_conn.append(172)\n" + 
+		"poly_conn.append(173)\n" + 
+		"poly_conn.append(174)\n" + 
+		"poly_conn.append(175)\n" + 
+		"poly_conn.append(176)\n" + 
+		"poly_conn.append(177)\n" + 
+		"poly_conn.append(178)\n" + 
+		"poly_conn.append(179)\n" + 
+		"poly_conn.append(180)\n" + 
+		"poly_conn.append(181)\n" + 
+		"poly_conn.append(182)\n" + 
+		"poly_conn.append(183)\n" + 
+		"poly_conn.append(184)\n" + 
+		"poly_conn.append(185)\n" + 
+		"poly_conn.append(186)\n" + 
+		"poly_conn.append(187)\n" + 
+		"poly_conn.append(188)\n" + 
+		"poly_conn.append(189)\n" + 
+		"poly_conn.append(190)\n" + 
+		"poly_conn.append(191)\n" + 
+		"poly_conn.append(192)\n" + 
+		"poly_conn.append(193)\n" + 
+		"poly_conn.append(194)\n" + 
+		"poly_conn.append(195)\n" + 
+		"poly_conn.append(196)\n" + 
+		"poly_conn.append(197)\n" + 
+		"poly_conn.append(198)\n" + 
+		"poly_conn.append(199)\n" + 
+		"poly_conn.append(200)\n" + 
+		"poly_conn.append(201)\n" + 
+		"poly_conn.append(202)\n" + 
+		"poly_conn.append(203)\n" + 
+		"poly_conn.append(204)\n" + 
+		"poly_conn.append(205)\n" + 
+		"poly_conn.append(206)\n" + 
+		"poly_conn.append(207)\n" + 
+		"poly_conn.append(208)\n" + 
+		"poly_conn.append(209)\n" + 
+		"poly_conn.append(210)\n" + 
+		"poly_conn.append(211)\n" + 
+		"poly_conn.append(212)\n" + 
+		"poly_conn.append(213)\n" + 
+		"poly_conn.append(214)\n" + 
+		"poly_conn.append(215)\n" + 
+		"poly_conn.append(216)\n" + 
+		"poly_conn.append(217)\n" + 
+		"poly_conn.append(218)\n" + 
+		"poly_conn.append(219)\n" + 
+		"poly_conn.append(220)\n" + 
+		"poly_conn.append(221)\n" + 
+		"poly_conn.append(222)\n" + 
+		"poly_conn.append(223)\n" + 
+		"poly_conn.append(224)\n" + 
+		"poly_conn.append(225)\n" + 
+		"poly_conn.append(226)\n" + 
+		"poly_conn.append(227)\n" + 
+		"poly_conn.append(228)\n" + 
+		"poly_conn.append(229)\n" + 
+		"poly_conn.append(230)\n" + 
+		"poly_conn.append(231)\n" + 
+		"poly_conn.append(232)\n" + 
+		"poly_conn.append(233)\n" + 
+		"poly_conn.append(234)\n" + 
+		"poly_conn.append(235)\n" + 
+		"poly_conn.append(236)\n" + 
+		"poly_conn.append(237)\n" + 
+		"u = om.MFloatArray()\n" + 
+		"v = om.MFloatArray()\n" + 
+		"uv_count = om.MIntArray()\n" + 
+		"uv_id = om.MIntArray()\n" + 
+		"uv_count.append(3)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(0)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(1)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(2)\n" + 
+		"uv_count.append(3)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(3)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(4)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(5)\n" + 
+		"uv_count.append(3)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(6)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(7)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(8)\n" + 
+		"uv_count.append(3)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(9)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(10)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(11)\n" + 
+		"uv_count.append(3)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(12)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(13)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(14)\n" + 
+		"uv_count.append(3)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(15)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(16)\n" + 
+		"u.append(       1.875000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(17)\n" + 
+		"uv_count.append(3)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(18)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(19)\n" + 
+		"u.append(       1.875000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(20)\n" + 
+		"uv_count.append(3)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(21)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(22)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(23)\n" + 
+		"uv_count.append(3)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(24)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(25)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(26)\n" + 
+		"uv_count.append(5)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(27)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(28)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(29)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(30)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(31)\n" + 
+		"uv_count.append(5)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(32)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(33)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(34)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(35)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(36)\n" + 
+		"uv_count.append(5)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(37)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(38)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(39)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(40)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(41)\n" + 
+		"uv_count.append(5)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(42)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(43)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(44)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(45)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(46)\n" + 
+		"uv_count.append(5)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(47)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(48)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(49)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(50)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(51)\n" + 
+		"uv_count.append(5)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(52)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(53)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(54)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(55)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(56)\n" + 
+		"uv_count.append(5)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(57)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(58)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(59)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(60)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(61)\n" + 
+		"uv_count.append(5)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(62)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(63)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(64)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(65)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(66)\n" + 
+		"uv_count.append(5)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(67)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(68)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(69)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(70)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(71)\n" + 
+		"uv_count.append(5)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(72)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(73)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(74)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(75)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(76)\n" + 
+		"uv_count.append(5)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(77)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(78)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(79)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(80)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(81)\n" + 
+		"uv_count.append(5)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(82)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(83)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(84)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(85)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(86)\n" + 
+		"uv_count.append(5)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(87)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(88)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(89)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(90)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(91)\n" + 
+		"uv_count.append(5)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(92)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(93)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(94)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(95)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(96)\n" + 
+		"uv_count.append(5)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(97)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(98)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(99)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(100)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(101)\n" + 
+		"uv_count.append(5)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(102)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(103)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(104)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(105)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(106)\n" + 
+		"uv_count.append(5)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(107)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(108)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(109)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(110)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(111)\n" + 
+		"uv_count.append(5)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(112)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(113)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(114)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(115)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(116)\n" + 
+		"uv_count.append(5)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(117)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(118)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(119)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(120)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(121)\n" + 
+		"uv_count.append(5)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(122)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(123)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(124)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(125)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(126)\n" + 
+		"uv_count.append(5)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(127)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(128)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(129)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(130)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(131)\n" + 
+		"uv_count.append(5)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(132)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(133)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(134)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(135)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(136)\n" + 
+		"uv_count.append(5)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(137)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(138)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(139)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(140)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(141)\n" + 
+		"uv_count.append(5)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(142)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(143)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(144)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(145)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(146)\n" + 
+		"uv_count.append(5)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(147)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(148)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(149)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(150)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(151)\n" + 
+		"uv_count.append(5)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(152)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(153)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(154)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(155)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(156)\n" + 
+		"uv_count.append(5)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(157)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(158)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(159)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(160)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(161)\n" + 
+		"uv_count.append(5)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(162)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(163)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(164)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(165)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(166)\n" + 
+		"uv_count.append(5)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(167)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(168)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(169)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(170)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(171)\n" + 
+		"uv_count.append(5)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(172)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(173)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(174)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(175)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(176)\n" + 
+		"uv_count.append(5)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(177)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(178)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(179)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(180)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(181)\n" + 
+		"uv_count.append(5)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(182)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(183)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(184)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(185)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(186)\n" + 
+		"uv_count.append(5)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(187)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(188)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(189)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(190)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(191)\n" + 
+		"uv_count.append(5)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(192)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(193)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(194)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(195)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(196)\n" + 
+		"uv_count.append(5)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(197)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(198)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(199)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(200)\n" + 
+		"u.append(       4.980000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(201)\n" + 
+		"uv_count.append(5)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(202)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(203)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(204)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(205)\n" + 
+		"u.append(       6.660000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(206)\n" + 
+		"uv_count.append(5)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(     503.500000)\n" + 
+		"uv_id.append(207)\n" + 
+		"u.append(       0.145000)\n" + 
+		"v.append(       0.145000)\n" + 
+		"uv_id.append(208)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(      -0.000000)\n" + 
+		"uv_id.append(209)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(210)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(211)\n" + 
+		"uv_count.append(5)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(212)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(213)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(214)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(215)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(216)\n" + 
+		"uv_count.append(5)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(217)\n" + 
+		"u.append(       2.646054)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(218)\n" + 
+		"u.append(       1.875000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(219)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(220)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(221)\n" + 
+		"uv_count.append(5)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(222)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(223)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(224)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(225)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(226)\n" + 
+		"uv_count.append(5)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(227)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(228)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(229)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(230)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(231)\n" + 
+		"uv_count.append(5)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(232)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(233)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(234)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(235)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(236)\n" + 
+		"uv_count.append(5)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(237)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(238)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(239)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(240)\n" + 
+		"u.append(      23.747601)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(241)\n" + 
+		"uv_count.append(5)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(242)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(243)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(244)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(245)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(246)\n" + 
+		"obj = om.MFnMesh()\n" + 
+		"obj.create(238,53,pa,poly_count,poly_conn,u,v)\n" + 
+		"obj.assignUVs(uv_count,uv_id)\n" + 
+		"obj.setName(\"test_obj__1_shape\")\n" + 
+		"om.MFnDagNode(obj.parent(0)).setName(\"test_obj__1\")\n" + 
+		"selectionList = om.MSelectionList()\n" + 
+		"selectionList.add( \"Scene\" )\n" + 
+		"node = om.MObject()\n" + 
+		"selectionList.getDependNode( 0, node )\n" + 
+		"om.MFnDagNode(node).fullPathName()\n" + 
+		"om.MFnDagNode(node).addChild(obj.parent(0))\n" + 
+		"transformFn = om.MFnTransform( obj.parent(0) )\n" + 
+		"matrix_content = [       1.000000 ,        0.000000,        0.000000, 0,       0.000000 ,        1.000000,        0.000000, 0,       0.000000 ,        0.000000,        1.000000, 0,       0.000000,       0.000000,       0.000000,1]\n" + 
+		"import maya.cmds as cmds\n" + 
+		"cmds.select(\"Scene|\" + om.MFnDagNode(obj.parent(0)).name())\n" + 
+		"cmds.xform(matrix=matrix_content)\n" + 
+"");
+// create object point group...
+string $pointGroupName = `group -em -name  "objectPGroup_box_1_1" -parent $sceneGroupName`;
+$pointGroupName = ($sceneGroupName + "|" + $pointGroupName);
+
+// create point p01...
+string $locator = stringArrayToString(`spaceLocator -name p01`, "");
+$locator = ("|" + $locator);
+xform -t -0.000000000000007 -0.000000000000007 -0.000000000000010 $locator;
+parent $locator $pointGroupName;
+
+// create point p02...
+string $locator = stringArrayToString(`spaceLocator -name p02`, "");
+$locator = ("|" + $locator);
+xform -t -12.796896385819913 6.441125621414957 8.530728353112382 $locator;
+parent $locator $pointGroupName;
+
+// create point p03...
+string $locator = stringArrayToString(`spaceLocator -name p03`, "");
+$locator = ("|" + $locator);
+xform -t -13.369470551923808 -6.784356516309557 8.912553859970522 $locator;
+parent $locator $pointGroupName;
+
+// create point p04...
+string $locator = stringArrayToString(`spaceLocator -name p04`, "");
+$locator = ("|" + $locator);
+xform -t 13.626089988788198 6.338905168979706 -9.083619674507549 $locator;
+parent $locator $pointGroupName;
+
+// create point p05...
+string $locator = stringArrayToString(`spaceLocator -name p05`, "");
+$locator = ("|" + $locator);
+xform -t -17.874249548682805 6.838192744160620 8.150425468579821 $locator;
+parent $locator $pointGroupName;
+
+// create point p06...
+string $locator = stringArrayToString(`spaceLocator -name p06`, "");
+$locator = ("|" + $locator);
+xform -t -19.978370963737277 -6.307567664863615 5.206111555295610 $locator;
+parent $locator $pointGroupName;
+
+// create point p08...
+string $locator = stringArrayToString(`spaceLocator -name p08`, "");
+$locator = ("|" + $locator);
+xform -t 13.311480689858403 -7.099217851128982 -8.873759556938801 $locator;
+parent $locator $pointGroupName;
+
+xform -zeroTransformPivots -rotateOrder zxy -scale 1.000000000000000 1.000000000000000 1.000000000000000 $pointGroupName;
+
+// animating point group objectPGroup_box_1_1...
+setKeyframe -at translateX -t 0 -v 179.459554072569546 $pointGroupName; 
+setKeyframe -at translateY -t 0 -v 126.605922905493145 $pointGroupName; 
+setKeyframe -at translateZ -t 0 -v 144.261542974647568 $pointGroupName; 
+setKeyframe -at rotateX -t 0 -v -22.912408884087384 $pointGroupName; 
+setKeyframe -at rotateY -t 0 -v 23.325605147215640 $pointGroupName; 
+setKeyframe -at rotateZ -t 0 -v 32.842543282384661 $pointGroupName;
+setKeyframe -at translateX -t 1 -v 179.265632589039598 $pointGroupName; 
+setKeyframe -at translateY -t 1 -v 126.728107079058631 $pointGroupName; 
+setKeyframe -at translateZ -t 1 -v 144.161360768976579 $pointGroupName; 
+setKeyframe -at rotateX -t 1 -v -25.586198318510672 $pointGroupName; 
+setKeyframe -at rotateY -t 1 -v 22.578912408905300 $pointGroupName; 
+setKeyframe -at rotateZ -t 1 -v 34.077787551532630 $pointGroupName;
+setKeyframe -at translateX -t 2 -v 179.071756211347207 $pointGroupName; 
+setKeyframe -at translateY -t 2 -v 126.578067165992181 $pointGroupName; 
+setKeyframe -at translateZ -t 2 -v 143.864880993512827 $pointGroupName; 
+setKeyframe -at rotateX -t 2 -v -27.370703937568734 $pointGroupName; 
+setKeyframe -at rotateY -t 2 -v 21.737244638764185 $pointGroupName; 
+setKeyframe -at rotateZ -t 2 -v 35.236628211121058 $pointGroupName;
+setKeyframe -at translateX -t 3 -v 179.037322215926309 $pointGroupName; 
+setKeyframe -at translateY -t 3 -v 126.745156440245438 $pointGroupName; 
+setKeyframe -at translateZ -t 3 -v 143.445412082535285 $pointGroupName; 
+setKeyframe -at rotateX -t 3 -v -29.129166589821732 $pointGroupName; 
+setKeyframe -at rotateY -t 3 -v 21.500716780902120 $pointGroupName; 
+setKeyframe -at rotateZ -t 3 -v 35.826044235253050 $pointGroupName;
+setKeyframe -at translateX -t 4 -v 178.723183461589912 $pointGroupName; 
+setKeyframe -at translateY -t 4 -v 127.179714429706252 $pointGroupName; 
+setKeyframe -at translateZ -t 4 -v 142.776711914823608 $pointGroupName; 
+setKeyframe -at rotateX -t 4 -v -33.263309071762102 $pointGroupName; 
+setKeyframe -at rotateY -t 4 -v 21.032556129822478 $pointGroupName; 
+setKeyframe -at rotateZ -t 4 -v 37.155337627647761 $pointGroupName;
+setKeyframe -at translateX -t 5 -v 178.309243315779042 $pointGroupName; 
+setKeyframe -at translateY -t 5 -v 127.233430925494176 $pointGroupName; 
+setKeyframe -at translateZ -t 5 -v 142.064879563609537 $pointGroupName; 
+setKeyframe -at rotateX -t 5 -v -36.686325259106191 $pointGroupName; 
+setKeyframe -at rotateY -t 5 -v 19.715400605631796 $pointGroupName; 
+setKeyframe -at rotateZ -t 5 -v 38.586193334487447 $pointGroupName;
+setKeyframe -at translateX -t 6 -v 177.995056492420900 $pointGroupName; 
+setKeyframe -at translateY -t 6 -v 127.317473071370131 $pointGroupName; 
+setKeyframe -at translateZ -t 6 -v 141.331715984292799 $pointGroupName; 
+setKeyframe -at rotateX -t 6 -v -39.249002690775043 $pointGroupName; 
+setKeyframe -at rotateY -t 6 -v 19.080279360021937 $pointGroupName; 
+setKeyframe -at rotateZ -t 6 -v 39.288994553456931 $pointGroupName;
+setKeyframe -at translateX -t 7 -v 177.650770423292130 $pointGroupName; 
+setKeyframe -at translateY -t 7 -v 127.423475108233362 $pointGroupName; 
+setKeyframe -at translateZ -t 7 -v 140.732351960628023 $pointGroupName; 
+setKeyframe -at rotateX -t 7 -v -42.352340902162751 $pointGroupName; 
+setKeyframe -at rotateY -t 7 -v 18.466693347576804 $pointGroupName; 
+setKeyframe -at rotateZ -t 7 -v 40.301519037539748 $pointGroupName;
+setKeyframe -at translateX -t 8 -v 177.407716657923402 $pointGroupName; 
+setKeyframe -at translateY -t 8 -v 127.585429361802312 $pointGroupName; 
+setKeyframe -at translateZ -t 8 -v 139.972308869953054 $pointGroupName; 
+setKeyframe -at rotateX -t 8 -v -45.710159809566008 $pointGroupName; 
+setKeyframe -at rotateY -t 8 -v 18.807096670315048 $pointGroupName; 
+setKeyframe -at rotateZ -t 8 -v 41.010792363790578 $pointGroupName;
+setKeyframe -at translateX -t 9 -v 176.965513869066683 $pointGroupName; 
+setKeyframe -at translateY -t 9 -v 127.769042967345115 $pointGroupName; 
+setKeyframe -at translateZ -t 9 -v 139.241129340695124 $pointGroupName; 
+setKeyframe -at rotateX -t 9 -v -49.218999063153767 $pointGroupName; 
+setKeyframe -at rotateY -t 9 -v 17.925864296641706 $pointGroupName; 
+setKeyframe -at rotateZ -t 9 -v 42.045585798501797 $pointGroupName;
+setKeyframe -at translateX -t 10 -v 176.415915793519986 $pointGroupName; 
+setKeyframe -at translateY -t 10 -v 127.861559260852516 $pointGroupName; 
+setKeyframe -at translateZ -t 10 -v 138.441662192880869 $pointGroupName; 
+setKeyframe -at rotateX -t 10 -v -52.022727414873515 $pointGroupName; 
+setKeyframe -at rotateY -t 10 -v 16.226152940979205 $pointGroupName; 
+setKeyframe -at rotateZ -t 10 -v 43.335800239610840 $pointGroupName;
+setKeyframe -at translateX -t 11 -v 175.723411510808916 $pointGroupName; 
+setKeyframe -at translateY -t 11 -v 127.710024682471357 $pointGroupName; 
+setKeyframe -at translateZ -t 11 -v 137.823601205686259 $pointGroupName; 
+setKeyframe -at rotateX -t 11 -v -54.369966674534815 $pointGroupName; 
+setKeyframe -at rotateY -t 11 -v 12.164559920485907 $pointGroupName; 
+setKeyframe -at rotateZ -t 11 -v 45.863166639709767 $pointGroupName;
+setKeyframe -at translateX -t 12 -v 175.129631372086294 $pointGroupName; 
+setKeyframe -at translateY -t 12 -v 127.743837717656078 $pointGroupName; 
+setKeyframe -at translateZ -t 12 -v 137.289074773149764 $pointGroupName; 
+setKeyframe -at rotateX -t 12 -v -55.030079507447553 $pointGroupName; 
+setKeyframe -at rotateY -t 12 -v 9.470263984621187 $pointGroupName; 
+setKeyframe -at rotateZ -t 12 -v 47.397633491395283 $pointGroupName;
+setKeyframe -at translateX -t 13 -v 174.380469149324000 $pointGroupName; 
+setKeyframe -at translateY -t 13 -v 127.932795961157765 $pointGroupName; 
+setKeyframe -at translateZ -t 13 -v 136.899601111015613 $pointGroupName; 
+setKeyframe -at rotateX -t 13 -v -56.508097678092213 $pointGroupName; 
+setKeyframe -at rotateY -t 13 -v 5.198960880753352 $pointGroupName; 
+setKeyframe -at rotateZ -t 13 -v 50.097771977043216 $pointGroupName;
+setKeyframe -at translateX -t 14 -v 173.467087321851608 $pointGroupName; 
+setKeyframe -at translateY -t 14 -v 127.656397856616422 $pointGroupName; 
+setKeyframe -at translateZ -t 14 -v 136.720210907963519 $pointGroupName; 
+setKeyframe -at rotateX -t 14 -v -57.372980417528261 $pointGroupName; 
+setKeyframe -at rotateY -t 14 -v -1.745282971806234 $pointGroupName; 
+setKeyframe -at rotateZ -t 14 -v 54.521025651876023 $pointGroupName;
+setKeyframe -at translateX -t 15 -v 172.768719990847558 $pointGroupName; 
+setKeyframe -at translateY -t 15 -v 126.808505113168479 $pointGroupName; 
+setKeyframe -at translateZ -t 15 -v 136.734774322222961 $pointGroupName; 
+setKeyframe -at rotateX -t 15 -v -56.246490228222925 $pointGroupName; 
+setKeyframe -at rotateY -t 15 -v -7.432014653231192 $pointGroupName; 
+setKeyframe -at rotateZ -t 15 -v 58.027965712303804 $pointGroupName;
+setKeyframe -at translateX -t 16 -v 172.481098157577406 $pointGroupName; 
+setKeyframe -at translateY -t 16 -v 125.963516918157296 $pointGroupName; 
+setKeyframe -at translateZ -t 16 -v 137.083646267905920 $pointGroupName; 
+setKeyframe -at rotateX -t 16 -v -53.994227314853504 $pointGroupName; 
+setKeyframe -at rotateY -t 16 -v -9.800602528880630 $pointGroupName; 
+setKeyframe -at rotateZ -t 16 -v 59.193383332116298 $pointGroupName;
+setKeyframe -at translateX -t 17 -v 172.503602828309795 $pointGroupName; 
+setKeyframe -at translateY -t 17 -v 125.204749948848757 $pointGroupName; 
+setKeyframe -at translateZ -t 17 -v 137.853562559858972 $pointGroupName; 
+setKeyframe -at rotateX -t 17 -v -49.893131297986194 $pointGroupName; 
+setKeyframe -at rotateY -t 17 -v -9.649610468768440 $pointGroupName; 
+setKeyframe -at rotateZ -t 17 -v 57.920228897295928 $pointGroupName;
+setKeyframe -at translateX -t 18 -v 172.710525422041513 $pointGroupName; 
+setKeyframe -at translateY -t 18 -v 124.684640566491908 $pointGroupName; 
+setKeyframe -at translateZ -t 18 -v 138.741481419820502 $pointGroupName; 
+setKeyframe -at rotateX -t 18 -v -46.484475281800457 $pointGroupName; 
+setKeyframe -at rotateY -t 18 -v -8.879587475714533 $pointGroupName; 
+setKeyframe -at rotateZ -t 18 -v 56.885221713336691 $pointGroupName;
+setKeyframe -at translateX -t 19 -v 172.966767542820605 $pointGroupName; 
+setKeyframe -at translateY -t 19 -v 124.306107117679545 $pointGroupName; 
+setKeyframe -at translateZ -t 19 -v 139.518256786875043 $pointGroupName; 
+setKeyframe -at rotateX -t 19 -v -42.575650343841254 $pointGroupName; 
+setKeyframe -at rotateY -t 19 -v -6.518678731689669 $pointGroupName; 
+setKeyframe -at rotateZ -t 19 -v 54.918615022794100 $pointGroupName;
+setKeyframe -at translateX -t 20 -v 173.120798954132709 $pointGroupName; 
+setKeyframe -at translateY -t 20 -v 123.784851703162417 $pointGroupName; 
+setKeyframe -at translateZ -t 20 -v 139.951870344295855 $pointGroupName; 
+setKeyframe -at rotateX -t 20 -v -39.229292637622521 $pointGroupName; 
+setKeyframe -at rotateY -t 20 -v -3.597539781280041 $pointGroupName; 
+setKeyframe -at rotateZ -t 20 -v 52.986794976044443 $pointGroupName;
+setKeyframe -at translateX -t 21 -v 173.170472573031191 $pointGroupName; 
+setKeyframe -at translateY -t 21 -v 123.144247275962115 $pointGroupName; 
+setKeyframe -at translateZ -t 21 -v 140.018433067276590 $pointGroupName; 
+setKeyframe -at rotateX -t 21 -v -35.361005596470683 $pointGroupName; 
+setKeyframe -at rotateY -t 21 -v -0.691675674624133 $pointGroupName; 
+setKeyframe -at rotateZ -t 21 -v 51.256521334797327 $pointGroupName;
+setKeyframe -at translateX -t 22 -v 173.135466257525650 $pointGroupName; 
+setKeyframe -at translateY -t 22 -v 122.920522981389581 $pointGroupName; 
+setKeyframe -at translateZ -t 22 -v 139.694586485823436 $pointGroupName; 
+setKeyframe -at rotateX -t 22 -v -32.483608574514356 $pointGroupName; 
+setKeyframe -at rotateY -t 22 -v 2.047042669784696 $pointGroupName; 
+setKeyframe -at rotateZ -t 22 -v 49.842831308564669 $pointGroupName;
+setKeyframe -at translateX -t 23 -v 172.891834811851481 $pointGroupName; 
+setKeyframe -at translateY -t 23 -v 122.917585279156995 $pointGroupName; 
+setKeyframe -at translateZ -t 23 -v 139.248369488906803 $pointGroupName; 
+setKeyframe -at rotateX -t 23 -v -30.587073917081586 $pointGroupName; 
+setKeyframe -at rotateY -t 23 -v 4.197260227103756 $pointGroupName; 
+setKeyframe -at rotateZ -t 23 -v 49.247944806387459 $pointGroupName;
+setKeyframe -at translateX -t 24 -v 172.744222908171679 $pointGroupName; 
+setKeyframe -at translateY -t 24 -v 123.003103866367368 $pointGroupName; 
+setKeyframe -at translateZ -t 24 -v 138.758339538393045 $pointGroupName; 
+setKeyframe -at rotateX -t 24 -v -28.656931947905711 $pointGroupName; 
+setKeyframe -at rotateY -t 24 -v 6.652911058873733 $pointGroupName; 
+setKeyframe -at rotateZ -t 24 -v 48.873758929131036 $pointGroupName;
+setKeyframe -at translateX -t 25 -v 172.633291429398980 $pointGroupName; 
+setKeyframe -at translateY -t 25 -v 122.910507473506996 $pointGroupName; 
+setKeyframe -at translateZ -t 25 -v 138.293345364974186 $pointGroupName; 
+setKeyframe -at rotateX -t 25 -v -26.440125586211259 $pointGroupName; 
+setKeyframe -at rotateY -t 25 -v 8.733457262522258 $pointGroupName; 
+setKeyframe -at rotateZ -t 25 -v 48.555711908247787 $pointGroupName;
+setKeyframe -at translateX -t 26 -v 172.750353026856942 $pointGroupName; 
+setKeyframe -at translateY -t 26 -v 122.685439520688575 $pointGroupName; 
+setKeyframe -at translateZ -t 26 -v 137.831868658446524 $pointGroupName; 
+setKeyframe -at rotateX -t 26 -v -23.708942947305918 $pointGroupName; 
+setKeyframe -at rotateY -t 26 -v 10.995684731012815 $pointGroupName; 
+setKeyframe -at rotateZ -t 26 -v 47.838534470138477 $pointGroupName;
+setKeyframe -at translateX -t 27 -v 172.830969290581180 $pointGroupName; 
+setKeyframe -at translateY -t 27 -v 122.589114367786635 $pointGroupName; 
+setKeyframe -at translateZ -t 27 -v 137.436397277827780 $pointGroupName; 
+setKeyframe -at rotateX -t 27 -v -20.997650185074665 $pointGroupName; 
+setKeyframe -at rotateY -t 27 -v 13.908947062714873 $pointGroupName; 
+setKeyframe -at rotateZ -t 27 -v 47.112623923542813 $pointGroupName;
+setKeyframe -at translateX -t 28 -v 172.774173729131689 $pointGroupName; 
+setKeyframe -at translateY -t 28 -v 122.361241203832932 $pointGroupName; 
+setKeyframe -at translateZ -t 28 -v 137.188594518629202 $pointGroupName; 
+setKeyframe -at rotateX -t 28 -v -18.957060902179766 $pointGroupName; 
+setKeyframe -at rotateY -t 28 -v 15.626179576579929 $pointGroupName; 
+setKeyframe -at rotateZ -t 28 -v 46.928516750970012 $pointGroupName;
+setKeyframe -at translateX -t 29 -v 172.731179711288945 $pointGroupName; 
+setKeyframe -at translateY -t 29 -v 121.828269456763124 $pointGroupName; 
+setKeyframe -at translateZ -t 29 -v 137.063317390705265 $pointGroupName; 
+setKeyframe -at rotateX -t 29 -v -16.321551354304869 $pointGroupName; 
+setKeyframe -at rotateY -t 29 -v 17.139561480486446 $pointGroupName; 
+setKeyframe -at rotateZ -t 29 -v 46.432129977617045 $pointGroupName;
+setKeyframe -at translateX -t 30 -v 172.949386146794438 $pointGroupName; 
+setKeyframe -at translateY -t 30 -v 121.219133582172702 $pointGroupName; 
+setKeyframe -at translateZ -t 30 -v 136.822311892337609 $pointGroupName; 
+setKeyframe -at rotateX -t 30 -v -13.318199167026805 $pointGroupName; 
+setKeyframe -at rotateY -t 30 -v 19.121262066158664 $pointGroupName; 
+setKeyframe -at rotateZ -t 30 -v 45.921505921324581 $pointGroupName;
+setKeyframe -at translateX -t 31 -v 173.396881234084560 $pointGroupName; 
+setKeyframe -at translateY -t 31 -v 120.780921235136731 $pointGroupName; 
+setKeyframe -at translateZ -t 31 -v 136.621265619172846 $pointGroupName; 
+setKeyframe -at rotateX -t 31 -v -10.409708853191677 $pointGroupName; 
+setKeyframe -at rotateY -t 31 -v 21.095509661897822 $pointGroupName; 
+setKeyframe -at rotateZ -t 31 -v 45.077054750071454 $pointGroupName;
+setKeyframe -at translateX -t 32 -v 173.924946026431314 $pointGroupName; 
+setKeyframe -at translateY -t 32 -v 120.439809385116064 $pointGroupName; 
+setKeyframe -at translateZ -t 32 -v 136.504689871291987 $pointGroupName; 
+setKeyframe -at rotateX -t 32 -v -7.706731508445003 $pointGroupName; 
+setKeyframe -at rotateY -t 32 -v 23.079874877571537 $pointGroupName; 
+setKeyframe -at rotateZ -t 32 -v 44.534216713291769 $pointGroupName;
+setKeyframe -at translateX -t 33 -v 174.229717948437610 $pointGroupName; 
+setKeyframe -at translateY -t 33 -v 120.189123551485110 $pointGroupName; 
+setKeyframe -at translateZ -t 33 -v 136.406455895114391 $pointGroupName; 
+setKeyframe -at rotateX -t 33 -v -3.052826570855313 $pointGroupName; 
+setKeyframe -at rotateY -t 33 -v 25.224237852918897 $pointGroupName; 
+setKeyframe -at rotateZ -t 33 -v 43.207437134793700 $pointGroupName;
+setKeyframe -at translateX -t 34 -v 174.432920165055748 $pointGroupName; 
+setKeyframe -at translateY -t 34 -v 119.895826951645816 $pointGroupName; 
+setKeyframe -at translateZ -t 34 -v 136.188924358129327 $pointGroupName; 
+setKeyframe -at rotateX -t 34 -v 1.395291078221604 $pointGroupName; 
+setKeyframe -at rotateY -t 34 -v 27.107318881027027 $pointGroupName; 
+setKeyframe -at rotateZ -t 34 -v 41.940678616042270 $pointGroupName;
+setKeyframe -at translateX -t 35 -v 174.631745777210256 $pointGroupName; 
+setKeyframe -at translateY -t 35 -v 119.465704387983592 $pointGroupName; 
+setKeyframe -at translateZ -t 35 -v 135.826108265885978 $pointGroupName; 
+setKeyframe -at rotateX -t 35 -v 4.750989172320423 $pointGroupName; 
+setKeyframe -at rotateY -t 35 -v 28.446804767026567 $pointGroupName; 
+setKeyframe -at rotateZ -t 35 -v 40.873701150566426 $pointGroupName;
+setKeyframe -at translateX -t 36 -v 174.998008947440638 $pointGroupName; 
+setKeyframe -at translateY -t 36 -v 118.623586019600268 $pointGroupName; 
+setKeyframe -at translateZ -t 36 -v 135.243222925569057 $pointGroupName; 
+setKeyframe -at rotateX -t 36 -v 9.891702474597420 $pointGroupName; 
+setKeyframe -at rotateY -t 36 -v 30.176686329813862 $pointGroupName; 
+setKeyframe -at rotateZ -t 36 -v 39.408604213302517 $pointGroupName;
+setKeyframe -at translateX -t 37 -v 175.362814701275283 $pointGroupName; 
+setKeyframe -at translateY -t 37 -v 117.720563774330898 $pointGroupName; 
+setKeyframe -at translateZ -t 37 -v 134.570804106017590 $pointGroupName; 
+setKeyframe -at rotateX -t 37 -v 13.474822052198489 $pointGroupName; 
+setKeyframe -at rotateY -t 37 -v 31.608372016253970 $pointGroupName; 
+setKeyframe -at rotateZ -t 37 -v 38.791676808377950 $pointGroupName;
+setKeyframe -at translateX -t 38 -v 175.622707680014315 $pointGroupName; 
+setKeyframe -at translateY -t 38 -v 116.971914489238401 $pointGroupName; 
+setKeyframe -at translateZ -t 38 -v 134.267816078439182 $pointGroupName; 
+setKeyframe -at rotateX -t 38 -v 15.942322952410485 $pointGroupName; 
+setKeyframe -at rotateY -t 38 -v 31.588609086776717 $pointGroupName; 
+setKeyframe -at rotateZ -t 38 -v 37.274275814864971 $pointGroupName;
+setKeyframe -at translateX -t 39 -v 175.696762832965305 $pointGroupName; 
+setKeyframe -at translateY -t 39 -v 116.584395695507695 $pointGroupName; 
+setKeyframe -at translateZ -t 39 -v 134.244076653912032 $pointGroupName; 
+setKeyframe -at rotateX -t 39 -v 15.457393786246662 $pointGroupName; 
+setKeyframe -at rotateY -t 39 -v 28.968829257354383 $pointGroupName; 
+setKeyframe -at rotateZ -t 39 -v 35.476157138819538 $pointGroupName;
+setKeyframe -at translateX -t 40 -v 175.965631508712107 $pointGroupName; 
+setKeyframe -at translateY -t 40 -v 116.224862245390895 $pointGroupName; 
+setKeyframe -at translateZ -t 40 -v 134.567271285677634 $pointGroupName; 
+setKeyframe -at rotateX -t 40 -v 13.737407542246872 $pointGroupName; 
+setKeyframe -at rotateY -t 40 -v 26.206303981891381 $pointGroupName; 
+setKeyframe -at rotateZ -t 40 -v 34.584178454282863 $pointGroupName;
+setKeyframe -at translateX -t 41 -v 176.005813413889712 $pointGroupName; 
+setKeyframe -at translateY -t 41 -v 115.811342925237483 $pointGroupName; 
+setKeyframe -at translateZ -t 41 -v 135.078075650620178 $pointGroupName; 
+setKeyframe -at rotateX -t 41 -v 12.015284739153804 $pointGroupName; 
+setKeyframe -at rotateY -t 41 -v 22.782024399972631 $pointGroupName; 
+setKeyframe -at rotateZ -t 41 -v 34.280106472266780 $pointGroupName;
+setKeyframe -at translateX -t 42 -v 176.044057881152298 $pointGroupName; 
+setKeyframe -at translateY -t 42 -v 115.288299566414040 $pointGroupName; 
+setKeyframe -at translateZ -t 42 -v 135.426385217522011 $pointGroupName; 
+setKeyframe -at rotateX -t 42 -v 10.883827412873103 $pointGroupName; 
+setKeyframe -at rotateY -t 42 -v 20.248117415725719 $pointGroupName; 
+setKeyframe -at rotateZ -t 42 -v 34.540270503408856 $pointGroupName;
+setKeyframe -at translateX -t 43 -v 175.823606476345589 $pointGroupName; 
+setKeyframe -at translateY -t 43 -v 115.008649226795569 $pointGroupName; 
+setKeyframe -at translateZ -t 43 -v 135.739603777279285 $pointGroupName; 
+setKeyframe -at rotateX -t 43 -v 9.177555360601096 $pointGroupName; 
+setKeyframe -at rotateY -t 43 -v 17.411948745324604 $pointGroupName; 
+setKeyframe -at rotateZ -t 43 -v 34.927901749456197 $pointGroupName;
+setKeyframe -at translateX -t 44 -v 175.385408976779615 $pointGroupName; 
+setKeyframe -at translateY -t 44 -v 114.992879232703402 $pointGroupName; 
+setKeyframe -at translateZ -t 44 -v 135.900807980456307 $pointGroupName; 
+setKeyframe -at rotateX -t 44 -v 6.612346117270290 $pointGroupName; 
+setKeyframe -at rotateY -t 44 -v 13.818833954768619 $pointGroupName; 
+setKeyframe -at rotateZ -t 44 -v 35.525707435011938 $pointGroupName;
+setKeyframe -at translateX -t 45 -v 174.952463070701270 $pointGroupName; 
+setKeyframe -at translateY -t 45 -v 114.999624261718651 $pointGroupName; 
+setKeyframe -at translateZ -t 45 -v 135.700841322558972 $pointGroupName; 
+setKeyframe -at rotateX -t 45 -v 5.498368685637332 $pointGroupName; 
+setKeyframe -at rotateY -t 45 -v 11.178750935805803 $pointGroupName; 
+setKeyframe -at rotateZ -t 45 -v 35.755019770426507 $pointGroupName;
+setKeyframe -at translateX -t 46 -v 174.274533614442987 $pointGroupName; 
+setKeyframe -at translateY -t 46 -v 115.171318281572923 $pointGroupName; 
+setKeyframe -at translateZ -t 46 -v 135.540665859870217 $pointGroupName; 
+setKeyframe -at rotateX -t 46 -v 3.398317701916648 $pointGroupName; 
+setKeyframe -at rotateY -t 46 -v 7.917552969699171 $pointGroupName; 
+setKeyframe -at rotateZ -t 46 -v 36.203126966792333 $pointGroupName;
+setKeyframe -at translateX -t 47 -v 173.669831470975225 $pointGroupName; 
+setKeyframe -at translateY -t 47 -v 115.536929023563218 $pointGroupName; 
+setKeyframe -at translateZ -t 47 -v 135.349524239359027 $pointGroupName; 
+setKeyframe -at rotateX -t 47 -v 1.945781542995017 $pointGroupName; 
+setKeyframe -at rotateY -t 47 -v 5.591643502680950 $pointGroupName; 
+setKeyframe -at rotateZ -t 47 -v 36.231566926234450 $pointGroupName;
+setKeyframe -at translateX -t 48 -v 172.742170411209742 $pointGroupName; 
+setKeyframe -at translateY -t 48 -v 115.968559229990703 $pointGroupName; 
+setKeyframe -at translateZ -t 48 -v 135.087738074049980 $pointGroupName; 
+setKeyframe -at rotateX -t 48 -v -1.407961485116066 $pointGroupName; 
+setKeyframe -at rotateY -t 48 -v 1.902817374433764 $pointGroupName; 
+setKeyframe -at rotateZ -t 48 -v 37.189652161255509 $pointGroupName;
+setKeyframe -at translateX -t 49 -v 172.027586198861400 $pointGroupName; 
+setKeyframe -at translateY -t 49 -v 116.303184756338581 $pointGroupName; 
+setKeyframe -at translateZ -t 49 -v 134.485844987285304 $pointGroupName; 
+setKeyframe -at rotateX -t 49 -v -3.539784744671449 $pointGroupName; 
+setKeyframe -at rotateY -t 49 -v -0.686794837530669 $pointGroupName; 
+setKeyframe -at rotateZ -t 49 -v 37.847785800985086 $pointGroupName;
+setKeyframe -at translateX -t 50 -v 171.290834052704611 $pointGroupName; 
+setKeyframe -at translateY -t 50 -v 116.495033110576045 $pointGroupName; 
+setKeyframe -at translateZ -t 50 -v 133.826651962211088 $pointGroupName; 
+setKeyframe -at rotateX -t 50 -v -4.878439149437646 $pointGroupName; 
+setKeyframe -at rotateY -t 50 -v -3.722522440370641 $pointGroupName; 
+setKeyframe -at rotateZ -t 50 -v 38.183201862979885 $pointGroupName;
+setKeyframe -at translateX -t 51 -v 170.427783262995348 $pointGroupName; 
+setKeyframe -at translateY -t 51 -v 116.885484659021074 $pointGroupName; 
+setKeyframe -at translateZ -t 51 -v 133.027068244622455 $pointGroupName; 
+setKeyframe -at rotateX -t 51 -v -7.562284610113096 $pointGroupName; 
+setKeyframe -at rotateY -t 51 -v -7.397481263013190 $pointGroupName; 
+setKeyframe -at rotateZ -t 51 -v 39.149557239019600 $pointGroupName;
+setKeyframe -at translateX -t 52 -v 169.581730650995326 $pointGroupName; 
+setKeyframe -at translateY -t 52 -v 117.639836410034093 $pointGroupName; 
+setKeyframe -at translateZ -t 52 -v 132.038546258911481 $pointGroupName; 
+setKeyframe -at rotateX -t 52 -v -11.337245191494842 $pointGroupName; 
+setKeyframe -at rotateY -t 52 -v -10.672263239819477 $pointGroupName; 
+setKeyframe -at rotateZ -t 52 -v 40.481437630076542 $pointGroupName;
+setKeyframe -at translateX -t 53 -v 168.686064914508904 $pointGroupName; 
+setKeyframe -at translateY -t 53 -v 118.093294088852602 $pointGroupName; 
+setKeyframe -at translateZ -t 53 -v 130.947642920739725 $pointGroupName; 
+setKeyframe -at rotateX -t 53 -v -14.406183949978487 $pointGroupName; 
+setKeyframe -at rotateY -t 53 -v -13.338155841510936 $pointGroupName; 
+setKeyframe -at rotateZ -t 53 -v 42.337491935534423 $pointGroupName;
+setKeyframe -at translateX -t 54 -v 167.907583811351799 $pointGroupName; 
+setKeyframe -at translateY -t 54 -v 118.306859951872212 $pointGroupName; 
+setKeyframe -at translateZ -t 54 -v 129.850102908449855 $pointGroupName; 
+setKeyframe -at rotateX -t 54 -v -17.507413268887827 $pointGroupName; 
+setKeyframe -at rotateY -t 54 -v -16.618365148666385 $pointGroupName; 
+setKeyframe -at rotateZ -t 54 -v 44.765068269771554 $pointGroupName;
+setKeyframe -at translateX -t 55 -v 167.306733980874583 $pointGroupName; 
+setKeyframe -at translateY -t 55 -v 118.655717863144559 $pointGroupName; 
+setKeyframe -at translateZ -t 55 -v 128.725715642757791 $pointGroupName; 
+setKeyframe -at rotateX -t 55 -v -21.321622476571886 $pointGroupName; 
+setKeyframe -at rotateY -t 55 -v -19.760489121109295 $pointGroupName; 
+setKeyframe -at rotateZ -t 55 -v 47.158065558015899 $pointGroupName;
+setKeyframe -at translateX -t 56 -v 166.733097609637809 $pointGroupName; 
+setKeyframe -at translateY -t 56 -v 118.733707685430105 $pointGroupName; 
+setKeyframe -at translateZ -t 56 -v 127.789823124165366 $pointGroupName; 
+setKeyframe -at rotateX -t 56 -v -24.430817527999306 $pointGroupName; 
+setKeyframe -at rotateY -t 56 -v -22.756980168210816 $pointGroupName; 
+setKeyframe -at rotateZ -t 56 -v 49.798659636402192 $pointGroupName;
+setKeyframe -at translateX -t 57 -v 166.506882282686064 $pointGroupName; 
+setKeyframe -at translateY -t 57 -v 118.940360627767035 $pointGroupName; 
+setKeyframe -at translateZ -t 57 -v 127.180694984641036 $pointGroupName; 
+setKeyframe -at rotateX -t 57 -v -27.529140485798550 $pointGroupName; 
+setKeyframe -at rotateY -t 57 -v -25.666164504208627 $pointGroupName; 
+setKeyframe -at rotateZ -t 57 -v 51.942894191614087 $pointGroupName;
+setKeyframe -at translateX -t 58 -v 166.418623293928249 $pointGroupName; 
+setKeyframe -at translateY -t 58 -v 119.341072485945574 $pointGroupName; 
+setKeyframe -at translateZ -t 58 -v 126.437436793888651 $pointGroupName; 
+setKeyframe -at rotateX -t 58 -v -32.230636319811516 $pointGroupName; 
+setKeyframe -at rotateY -t 58 -v -28.192889213874995 $pointGroupName; 
+setKeyframe -at rotateZ -t 58 -v 54.571848618487493 $pointGroupName;
+setKeyframe -at translateX -t 59 -v 166.461199266027620 $pointGroupName; 
+setKeyframe -at translateY -t 59 -v 119.589977044505389 $pointGroupName; 
+setKeyframe -at translateZ -t 59 -v 125.335028861013086 $pointGroupName; 
+setKeyframe -at rotateX -t 59 -v -37.848292126010115 $pointGroupName; 
+setKeyframe -at rotateY -t 59 -v -30.959894032691562 $pointGroupName; 
+setKeyframe -at rotateZ -t 59 -v 58.610144401449908 $pointGroupName;
+setKeyframe -at translateX -t 60 -v 166.472140803729360 $pointGroupName; 
+setKeyframe -at translateY -t 60 -v 119.930899726069242 $pointGroupName; 
+setKeyframe -at translateZ -t 60 -v 124.237993493537260 $pointGroupName; 
+setKeyframe -at rotateX -t 60 -v -42.205696953817139 $pointGroupName; 
+setKeyframe -at rotateY -t 60 -v -32.992384534330427 $pointGroupName; 
+setKeyframe -at rotateZ -t 60 -v 61.407395305133313 $pointGroupName;
+setKeyframe -at translateX -t 61 -v 166.358830777249466 $pointGroupName; 
+setKeyframe -at translateY -t 61 -v 120.718807090048330 $pointGroupName; 
+setKeyframe -at translateZ -t 61 -v 123.429817440095007 $pointGroupName; 
+setKeyframe -at rotateX -t 61 -v -46.064282532741728 $pointGroupName; 
+setKeyframe -at rotateY -t 61 -v -32.719568742226087 $pointGroupName; 
+setKeyframe -at rotateZ -t 61 -v 62.667644725737382 $pointGroupName;
+setKeyframe -at translateX -t 62 -v 166.410643705418352 $pointGroupName; 
+setKeyframe -at translateY -t 62 -v 121.079683355309584 $pointGroupName; 
+setKeyframe -at translateZ -t 62 -v 123.113114469797040 $pointGroupName; 
+setKeyframe -at rotateX -t 62 -v -49.970083526634454 $pointGroupName; 
+setKeyframe -at rotateY -t 62 -v -32.614337424760144 $pointGroupName; 
+setKeyframe -at rotateZ -t 62 -v 64.602445563165730 $pointGroupName;
+setKeyframe -at translateX -t 63 -v 166.623030842469348 $pointGroupName; 
+setKeyframe -at translateY -t 63 -v 120.961569782577726 $pointGroupName; 
+setKeyframe -at translateZ -t 63 -v 123.019422936045544 $pointGroupName; 
+setKeyframe -at rotateX -t 63 -v -52.072062982105116 $pointGroupName; 
+setKeyframe -at rotateY -t 63 -v -29.941963522697129 $pointGroupName; 
+setKeyframe -at rotateZ -t 63 -v 64.297159578797547 $pointGroupName;
+setKeyframe -at translateX -t 64 -v 166.894048235520302 $pointGroupName; 
+setKeyframe -at translateY -t 64 -v 121.223392975998010 $pointGroupName; 
+setKeyframe -at translateZ -t 64 -v 123.099979418008900 $pointGroupName; 
+setKeyframe -at rotateX -t 64 -v -54.529228888534220 $pointGroupName; 
+setKeyframe -at rotateY -t 64 -v -26.560796062790274 $pointGroupName; 
+setKeyframe -at rotateZ -t 64 -v 63.036096789587639 $pointGroupName;
+setKeyframe -at translateX -t 65 -v 167.288545057372744 $pointGroupName; 
+setKeyframe -at translateY -t 65 -v 121.879029550288820 $pointGroupName; 
+setKeyframe -at translateZ -t 65 -v 123.336561686237474 $pointGroupName; 
+setKeyframe -at rotateX -t 65 -v -55.971503687745148 $pointGroupName; 
+setKeyframe -at rotateY -t 65 -v -21.391186251997887 $pointGroupName; 
+setKeyframe -at rotateZ -t 65 -v 59.485737329029817 $pointGroupName;
+setKeyframe -at translateX -t 66 -v 167.529881415580149 $pointGroupName; 
+setKeyframe -at translateY -t 66 -v 121.705650441381280 $pointGroupName; 
+setKeyframe -at translateZ -t 66 -v 123.884267708389473 $pointGroupName; 
+setKeyframe -at rotateX -t 66 -v -55.334380458443661 $pointGroupName; 
+setKeyframe -at rotateY -t 66 -v -17.273461919454611 $pointGroupName; 
+setKeyframe -at rotateZ -t 66 -v 56.788634271493606 $pointGroupName;
+setKeyframe -at translateX -t 67 -v 168.102274873912137 $pointGroupName; 
+setKeyframe -at translateY -t 67 -v 121.549440465975209 $pointGroupName; 
+setKeyframe -at translateZ -t 67 -v 124.608947609717234 $pointGroupName; 
+setKeyframe -at rotateX -t 67 -v -55.322757506405914 $pointGroupName; 
+setKeyframe -at rotateY -t 67 -v -13.011595179205617 $pointGroupName; 
+setKeyframe -at rotateZ -t 67 -v 54.021380001865616 $pointGroupName;
+setKeyframe -at translateX -t 68 -v 168.877919208763387 $pointGroupName; 
+setKeyframe -at translateY -t 68 -v 121.417780367669380 $pointGroupName; 
+setKeyframe -at translateZ -t 68 -v 125.287830894137244 $pointGroupName; 
+setKeyframe -at rotateX -t 68 -v -54.073425685542709 $pointGroupName; 
+setKeyframe -at rotateY -t 68 -v -6.965415797052318 $pointGroupName; 
+setKeyframe -at rotateZ -t 68 -v 50.684344670256870 $pointGroupName;
+setKeyframe -at translateX -t 69 -v 169.514546518017312 $pointGroupName; 
+setKeyframe -at translateY -t 69 -v 121.640804219169766 $pointGroupName; 
+setKeyframe -at translateZ -t 69 -v 126.023732574358348 $pointGroupName; 
+setKeyframe -at rotateX -t 69 -v -52.118301746673950 $pointGroupName; 
+setKeyframe -at rotateY -t 69 -v -2.488381110412449 $pointGroupName; 
+setKeyframe -at rotateZ -t 69 -v 47.644977408184097 $pointGroupName;
+setKeyframe -at translateX -t 70 -v 169.871458999822693 $pointGroupName; 
+setKeyframe -at translateY -t 70 -v 122.024271970216873 $pointGroupName; 
+setKeyframe -at translateZ -t 70 -v 126.587582096053666 $pointGroupName; 
+setKeyframe -at rotateX -t 70 -v -49.912729527003485 $pointGroupName; 
+setKeyframe -at rotateY -t 70 -v 0.621075554693683 $pointGroupName; 
+setKeyframe -at rotateZ -t 70 -v 45.204787792737051 $pointGroupName;
+setKeyframe -at translateX -t 71 -v 170.114177294641649 $pointGroupName; 
+setKeyframe -at translateY -t 71 -v 122.149853670981670 $pointGroupName; 
+setKeyframe -at translateZ -t 71 -v 126.462919886435202 $pointGroupName; 
+setKeyframe -at rotateX -t 71 -v -46.305720163831943 $pointGroupName; 
+setKeyframe -at rotateY -t 71 -v 3.204488264988745 $pointGroupName; 
+setKeyframe -at rotateZ -t 71 -v 43.259331793334212 $pointGroupName;
+python ("import maya.OpenMaya as om\n" + 
+		"pa = om.MPointArray()\n" + 
+		"pa.append(      71.722226,      68.833253,     133.369262)\n" + 
+		"pa.append(      76.869608,      68.833329,     141.090762)\n" + 
+		"pa.append(      71.875240,      89.399605,     133.267056)\n" + 
+		"pa.append(      77.022621,      89.399681,     140.988556)\n" + 
+		"pa.append(     104.851891,      89.045012,     111.283842)\n" + 
+		"pa.append(     109.999273,      89.045088,     119.005342)\n" + 
+		"pa.append(     104.698877,      68.478659,     111.386048)\n" + 
+		"pa.append(     109.846259,      68.478735,     119.107548)\n" + 
+		"poly_count = om.MIntArray()\n" + 
+		"poly_count.append(4)\n" + 
+		"poly_count.append(4)\n" + 
+		"poly_count.append(4)\n" + 
+		"poly_count.append(4)\n" + 
+		"poly_count.append(4)\n" + 
+		"poly_count.append(4)\n" + 
+		"poly_conn = om.MIntArray()\n" + 
+		"poly_conn.append(0)\n" + 
+		"poly_conn.append(1)\n" + 
+		"poly_conn.append(3)\n" + 
+		"poly_conn.append(2)\n" + 
+		"poly_conn.append(2)\n" + 
+		"poly_conn.append(3)\n" + 
+		"poly_conn.append(5)\n" + 
+		"poly_conn.append(4)\n" + 
+		"poly_conn.append(4)\n" + 
+		"poly_conn.append(5)\n" + 
+		"poly_conn.append(7)\n" + 
+		"poly_conn.append(6)\n" + 
+		"poly_conn.append(6)\n" + 
+		"poly_conn.append(7)\n" + 
+		"poly_conn.append(1)\n" + 
+		"poly_conn.append(0)\n" + 
+		"poly_conn.append(1)\n" + 
+		"poly_conn.append(7)\n" + 
+		"poly_conn.append(5)\n" + 
+		"poly_conn.append(3)\n" + 
+		"poly_conn.append(6)\n" + 
+		"poly_conn.append(0)\n" + 
+		"poly_conn.append(2)\n" + 
+		"poly_conn.append(4)\n" + 
+		"u = om.MFloatArray()\n" + 
+		"v = om.MFloatArray()\n" + 
+		"uv_count = om.MIntArray()\n" + 
+		"uv_id = om.MIntArray()\n" + 
+		"uv_count.append(4)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(0)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(1)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(2)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(3)\n" + 
+		"uv_count.append(4)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(4)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(5)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(6)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(7)\n" + 
+		"uv_count.append(4)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(8)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(9)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(10)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(11)\n" + 
+		"uv_count.append(4)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(12)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(13)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(14)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(15)\n" + 
+		"uv_count.append(4)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(16)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(17)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(18)\n" + 
+		"u.append(       0.000018)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(19)\n" + 
+		"uv_count.append(4)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(20)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(21)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(22)\n" + 
+		"u.append(       0.000000)\n" + 
+		"v.append(       0.000000)\n" + 
+		"uv_id.append(23)\n" + 
+		"obj = om.MFnMesh()\n" + 
+		"obj.create(8,6,pa,poly_count,poly_conn,u,v)\n" + 
+		"obj.assignUVs(uv_count,uv_id)\n" + 
+		"obj.setName(\"box_obj__1_shape\")\n" + 
+		"om.MFnDagNode(obj.parent(0)).setName(\"box_obj__1\")\n" + 
+		"selectionList = om.MSelectionList()\n" + 
+		"selectionList.add( \"objectPGroup_box_1_1\" )\n" + 
+		"node = om.MObject()\n" + 
+		"selectionList.getDependNode( 0, node )\n" + 
+		"om.MFnDagNode(node).fullPathName()\n" + 
+		"om.MFnDagNode(node).addChild(obj.parent(0))\n" + 
+		"transformFn = om.MFnTransform( obj.parent(0) )\n" + 
+		"matrix_content = [       1.000000 ,        0.000000,        0.000000, 0,       0.000000 ,        1.000000,        0.000000, 0,       0.000000 ,        0.000000,        1.000000, 0,     -93.132280,     -78.941992,    -130.249481,1]\n" + 
+		"import maya.cmds as cmds\n" + 
+		"cmds.select(\"objectPGroup_box_1_1|\" + om.MFnDagNode(obj.parent(0)).name())\n" + 
+		"cmds.xform(matrix=matrix_content)\n" + 
+"");xform -zeroTransformPivots -rotateOrder zxy -translation 0.000000000000000 0.000000000000000 0.000000000000000 -scale 1.000000000000000 1.000000000000000 1.000000000000000 -rotation -0.000000000000000 0.000000000000000 0.000000000000000 $sceneGroupName;
+
+
