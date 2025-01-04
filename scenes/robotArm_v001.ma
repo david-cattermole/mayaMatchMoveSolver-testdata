@@ -2049,7 +2049,6 @@ createNode displayLayerManager -n "layerManager";
 	setAttr -s 2 ".dli[1]"  1;
 createNode displayLayer -n "defaultLayer";
 	rename -uid "AD953B50-4EF8-4506-FAFD-3BAB41461ED1";
-	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
 	rename -uid "021E10CF-4B22-4263-C8EB-059BE0CEECBD";
 createNode renderLayer -n "defaultRenderLayer";
