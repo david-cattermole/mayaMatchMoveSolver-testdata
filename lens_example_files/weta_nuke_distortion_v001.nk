@@ -1,0 +1,17 @@
+# Created by 3DEqualizer4 using Export Nuke Distortion Nodes export script
+tde4_ldp_radial_decentered_deg_4 {
+ direction undistort
+ tde4_focal_length_cm 3.0000000 
+ tde4_filmback_width_cm 2.2129778 
+ tde4_filmback_height_cm 1.8672000 
+ tde4_lens_center_offset_x_cm 0.0000000 
+ tde4_lens_center_offset_y_cm 0.0000000 
+ tde4_pixel_aspect 1.0000000 
+ Distortion___Degree_2 0.2078652 
+ U___Degree_2 0.0101124 
+ V___Degree_2 -0.0078652 
+ Quartic_Distortion___Degree_4 -0.1179775 
+ U___Degree_4 -0.0078652 
+ V___Degree_4 0.0146067 
+ name tde4_ldp_hcw_painting
+}
