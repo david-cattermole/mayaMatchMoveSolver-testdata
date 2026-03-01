@@ -1,0 +1,70 @@
+{
+    // Version of the mmsettings file format structure.
+    "version": 1,
+
+    // Data in the file format.
+    "data": {
+        // The frame that will be moved to the origin.
+        "origin_frame": 0,
+
+        // The frames that will be solved.
+        "frames": {
+
+            // Start frame to be solved.
+            "start_frame": 5,
+
+            // End frame to be solved.
+            "end_frame": 84
+        },
+
+        // Settings related to how the adjustment solver works.
+        "adjustment_solver": {
+
+            // The type of adjustment solver. Can be one of:
+            // - "evolution_refine"
+            // - "evolution_unknown"
+            // - "uniform_grid"
+            "type": "evolution_refine",
+
+            // The number of CPU threads to use for the adjustment
+            // solver. null means all threads, a value of 1+ will
+            // explicitly define the number of threads.
+            "thread_count": null,
+
+            // Automatic value range estimation. Allows the evolution
+            // solver to determine
+            "evolution_value_range_estimate": true,
+
+            // The number of generations in the solver.
+            "evolution_generation_count": null,
+
+            // The number of samples in each generation.
+            "evolution_population_count": null
+        },
+
+        // Defines the per-attribute values when using the
+        // adjustment solvers.
+        //
+        // NOTE: The adjustment solver currently only allows adjusting
+        // the camera focal length, however in future this will
+        // change.
+        "adjustment_attributes": [
+
+            // Example for specifying the focal length value
+            // range.
+            {
+                // The attribute name.
+                "name": "camera.focal_length_mm",
+                
+                // The minimum and maximum value the solver can set
+                // for this attribute.
+                "value_min": 0.1,
+                "value_max": 120.0,
+
+                // The number of samples used for this attribute in
+                // the uniform grid solver.
+                "sample_count": 8
+            }
+        ]
+    }
+}

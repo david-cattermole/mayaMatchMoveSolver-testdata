@@ -1,0 +1,14 @@
+{
+    // Version of the mmsettings file format structure.
+    "version": 1,
+
+    // Data in the file format.
+    "data": {
+        // Settings related to how the adjustment solver works.
+        "adjustment_solver": {
+            // Automatic value range estimation. Allows the evolution
+            // solver to determine
+            "evolution_value_range_estimate": false
+        }
+    }
+}
